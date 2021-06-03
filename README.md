@@ -88,6 +88,7 @@ Ideally your genomes will have less than 200 contigs and an N50 score greater th
 
 _**Average Nucleotide Identities**_
 
+The average nucleotide identity (ANI) is a similarity index between a given pair of genomes. A cutoff score of >95% indicates that they belong to the same species. The program below is a fast option for calculating ANI between pairs of genomes, or between genomes and a reference. Note that this analysis does not support highly divergent genomes (< 80%), and therefore should not be used to compare genomes of divergent species. Neverthless, it may be useful for students examining divergent genomes to confirm species designation by comparing genomes to a reference. 
 
 
 _**Annotation**_
