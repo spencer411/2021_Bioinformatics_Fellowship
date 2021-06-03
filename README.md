@@ -42,8 +42,20 @@ _**Quality Control**_
 
 One of the first steps in analyzing genomic data is to make sure your data is of good quality. Poor quality data can lead to erroneous results and problems with downstream analysis. Here we present two tools that can be used to asseess the quality of the genomes you will be anaylzing:
 
-1. Checkm
-Checkm can be used to determine the completeness and level of contaimtination in each of your genomes. 
+1. **CheckM** CheckM can be used to determine the completeness and level of contaimtination in each of your genomes and allows for a taxon specific workflow. More information about checkM can be found here: https://github.com/Ecogenomics/CheckM/wiki/Introduction#about
+
+To install checkm using conda, copy and paste the code below after setting up and activating a CheckM environment:
+
+conda install -c bioconda checkm-genome
+
+Once the conda environment is activated, an example of how checkm might be executed can be found below:
+
+checkm taxon_set genus "Salmonella" sal.ms
+checkm analyze -t 8 -x fa sal.ms /network/rit/lab/andamlab/bioinformatics_workshop /network/rit/lab/andamlab/bioinformatics_workshop/checkm_output
+checkm qa -t 8 sal.ms /network/rit/lab/andamlab/bioinformatics_workshop/checkm_output
+
+In the first line of the code above we are creating a taxon file, in this case called sal.ms, telling Checkm that our species is of the genus Salmonella
+
 
 3. Quast
 
