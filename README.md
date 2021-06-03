@@ -74,7 +74,11 @@ To install Quast using conda, copy and paste the code below after setting up and
 conda install -c bioconda quast
 ```
 
-Once the conda environment is activated, an example of how Quast might be executed can be found below:
+Once the conda environment is activated, an example of how Quast might be executed in a folder full of genomes can be found below:
+
+```
+for FILE in *.fa; do quast.py $FILE; done
+```
 
 **VISUALIZATION TOOLS**
 
