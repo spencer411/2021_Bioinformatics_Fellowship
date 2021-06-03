@@ -60,7 +60,7 @@ checkm qa -t 16 sal.ms /network/rit/lab/andamlab/bioinformatics_workshop/checkm_
 
 In the first line of the code above we are creating a taxon file, in this case called "sal.ms", telling CheckM that our species is of the genus _Salmonella_. A full list of genera supported by checkm can be found here: [checkm_taxon_list.txt](https://github.com/spencer411/2021_Bioinformatics_Fellowship/files/6593316/checkm_taxon_list.txt)
 
-In the second line we are telling CheckM to "analyze" using 16 threads(-t 16), and that our genomes have the extension .fa (-x fa) pointing CheckM to a folder that contains all of our _Salmonella_ genomes, and providing CheckM with the path and name of the output folder to create (in this case checkm_output)
+In the second line we are telling CheckM to "analyze" using 16 threads (-t 16), and that our genomes have the extension .fa (-x fa) pointing CheckM to a folder that contains all of our _Salmonella_ genomes, and providing CheckM with the path and name of the output folder to create (in this case checkm_output)
 
 In the last line of code we are telling CheckM to assess the data we analyzed in the prior step for contaimnation and completeness (qa).
 
