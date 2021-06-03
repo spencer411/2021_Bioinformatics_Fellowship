@@ -22,7 +22,10 @@ This dataset consists of 64 type strains representing 50 species in the genus _S
 Kingdom (NCTC), Deutsche Sammlung von Mikroorganismen und Zellkulturen, Germany(DSMZ), and Culture Collection, University of Göteborg, Sweden (CCUG). You can read more about the genomes here: [Cole_et_al.pdf](https://github.com/spencer411/2021_Bioinformatics_Fellowship/files/6592256/Cole_et_al.pdf)
 
 4. _Bacillaceae_ strains isolated from the International Space Station.
-This dataset consists of 29 bacterial isolates from the family _Bacillaceae_. Members of this group are common, and can be found in soil, sediments, air, freshwater, marine ecosystems, foods and in extreme environments with high temperatures. You can read more about the genomes collected on the space station here: [Daudu_et_al.pdf](https://github.com/spencer411/2021_Bioinformatics_Fellowship/files/6592307/Daudu_et_al.pdf)
+This dataset consists of 29 bacterial isolates from the family _Bacillaceae_. Members of this group are common, and can be found in soil, sediments, air, freshwater, marine ecosystems, foods and in extreme environments. You can read more about the genomes collected on the space station here: [Daudu_et_al.pdf](https://github.com/spencer411/2021_Bioinformatics_Fellowship/files/6592307/Daudu_et_al.pdf)
+
+5. Swine-associated Methicillin-Resistant _Staphylococcus aureus_. This dataset consists of genome sequences for 63 Livestock-associated MRSA isolates all of Sequence Type (ST) 5, isolated in the United States. ST5 isolates are a public concern due to their pathogenicity and ability to acquire mobile genetic elements. You can read more about the genomes here: [Hau_et_al_1.pdf](https://github.com/spencer411/2021_Bioinformatics_Fellowship/files/6592628/Hau_et_al_1.pdf)
+
 
 
 
