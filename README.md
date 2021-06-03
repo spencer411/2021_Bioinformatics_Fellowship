@@ -145,6 +145,16 @@ prokka --prefix genome_1 --genus Salmonella --outdir genome_1_prokka genome_1.fa
 
 The --genus option above needs to be manipulated based on the species you are examining.
 
+Prokka creates a folder that has several files in it based on the results of the annotation. The main file we are interested in for downstream analysis is the [.gff file](https://en.wikipedia.org/wiki/General_feature_format). This file includes both the nucleotide sequence, and the position and names of genes present in the genome. Since you will likely want to move all of the .gff files to a single folder for downstream analysis, you can use the following code from the folder that contains all your genomes to do so, assuming you first make a folder called "annotations"
+
+```
+mv **/*.gff annotations
+```
+
+_**Pan-Genome Analysis**_
+
+Now we come to one of the more interesting analyses we can carry out on our combined data set. That is a [Pan-genome] (https://en.wikipedia.org/wiki/Pan-genome) analysis. A pan-genome can be defined as the entire gene content belonging to a study group. The pan-genome consists of core genes (genes shared by all isolates), and accessory genes (genes only present in specific groups or individuals). Here you can choose between two of the most commonly used programs for such an analysis:
+
 
 
 **VISUALIZATION TOOLS**
