@@ -40,6 +40,13 @@ This dataset is comprised of 20 biosafety level 2 (BSL-2) opportunistic pathogen
 
 _**Quality Control**_
 
+One of the first steps in analyzing genomic data is to make sure your data is of good quality. Poor quality data can lead to erroneous results and problems with downstream analysis. Here we present two tools that can be used to asseess the quality of the genomes you will be anaylzing:
+
+1. Checkm
+Checkm can be used to determine the completeness and level of contaimtination in each of your genomes. 
+
+3. Quast
+
 **VISUALIZATION TOOLS**
 
 
