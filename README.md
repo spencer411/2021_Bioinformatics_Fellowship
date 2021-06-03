@@ -54,11 +54,13 @@ Once the conda environment is activated, an example of how checkm might be execu
 
 ```
 checkm taxon_set genus "Salmonella" sal.ms
-checkm analyze -t 8 -x fa sal.ms /network/rit/lab/andamlab/bioinformatics_workshop /network/rit/lab/andamlab/bioinformatics_workshop/checkm_output
-checkm qa -t 8 sal.ms /network/rit/lab/andamlab/bioinformatics_workshop/checkm_output
+checkm analyze -t 16 -x fa sal.ms /network/rit/lab/andamlab/bioinformatics_workshop /network/rit/lab/andamlab/bioinformatics_workshop/checkm_output
+checkm qa -t 16 sal.ms /network/rit/lab/andamlab/bioinformatics_workshop/checkm_output
 ```
 
-In the first line of the code above we are creating a taxon file, in this case called sal.ms, telling Checkm that our species is of the genus Salmonella. In the second line we are pointing checkm to 
+In the first line of the code above we are creating a taxon file, in this case called "sal.ms", telling CheckM that our species is of the genus Salmonella. A full list of genera supported by checkm can be found here:
+
+In the second line we are telling CheckM to "analyze" using 16 threads(-t 16), and that our genomes have the extension .fa (-x fa) pointing CheckM to a folder that contains all of our Salmonella genomes, and providing CheckM with the path and name of the output folder to create (in this case checkm_output)
 
 
 3. Quast
