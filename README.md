@@ -86,10 +86,37 @@ Note that quast produces a folder named "quast_results". In the results folder y
 
 Ideally your genomes will have less than 200 contigs and an N50 score greater than 40,000 bp.
 
-_**Average Nucleotide Identities**_
+_**Average Nucleotide Identity**_
 
-The average nucleotide identity (ANI) is a similarity index between a given pair of genomes. A cutoff score of >95% indicates that they belong to the same species. The program below is a fast option for calculating ANI between pairs of genomes, or between genomes and a reference. Note that this analysis does not support highly divergent genomes (< 80%), and therefore should not be used to compare genomes of divergent species. Neverthless, it may be useful for students examining divergent genomes to confirm species designation by comparing genomes to a reference. 
+The average nucleotide identity (ANI) is a similarity index between a given pair of genomes. A cutoff score of >95% indicates that they belong to the same species. The program below is a fast option for calculating ANI between pairs of genomes, or between genomes and a reference. Note that this analysis does not support highly divergent genomes (< 80% ANI) and therefore should not be used to compare genomes of divergent species. Neverthless, it may be useful for students examining divergent genomes to confirm species designation by comparing genomes to a reference. 
 
+**FastANI:** FastANI is developed for fast alignment-free computation of whole-genome Average Nucleotide Identity (ANI). ANI is defined as mean nucleotide identity of orthologous gene pairs shared between two microbial genomes. FastANI supports pairwise comparison of both complete and draft genome assemblies. More detailed information about FastANI can be found [here](https://github.com/ParBLiSS/FastANI#fastani).
+
+To install FastANI using conda, copy and paste the code below after setting up and activating the FastANI conda environment:
+
+```
+conda install -c bioconda fastani
+```
+
+Once the conda environment is activated, an example of how FastANI might be executed in a folder full of genomes can be found below:
+
+```
+fastANI --ql list1.txt --rl list2.txt -o fastani_senterica.txt
+```
+
+In the above script we are comparing genomes from list1.txt to list2.txt and the output is written to fastani_senterica.txt. To create a list of genomes for fastANI, one can simply use the following code to create a list for a given folder:
+
+```
+ls *.fa > list1.txt
+```
+
+If you are interested in comparing your samples to a reference genome, this can be done by using the following script:
+
+```
+fastANI --ql list1.txt -r NZ_AP014944.fa -o fastani_refblast_schleif.txt
+```
+
+In the script above you are comparing your list against the reference genome NZ_AP014944.fa downloaded from NCBI.
 
 _**Annotation**_
 
