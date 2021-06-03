@@ -44,13 +44,13 @@ One of the first steps in analyzing genomic data is to make sure your data is of
 
 **CheckM:** CheckM can be used to determine the completeness and level of contaimtination in each of your genomes and allows for a taxon specific workflow. More information about checkM can be found [here](https://github.com/Ecogenomics/CheckM/wiki/Introduction#about).
 
-To install checkm using conda, copy and paste the code below after setting up and activating a CheckM environment:
+To install CheckM using conda, copy and paste the code below after setting up and activating a CheckM environment:
 
 ```
 conda install -c bioconda checkm-genome
 ```
 
-Once the conda environment is activated, an example of how checkm might be executed can be found below:
+Once the conda environment is activated, an example of how CheckM might be executed can be found below:
 
 ```
 checkm taxon_set genus "Salmonella" sal.ms
@@ -67,6 +67,14 @@ In the last line of code we are telling CheckM to assess the data we analyzed in
 Completeness and contamination will be written directly to your output file. Usually contamination at a levels of 5% or less is considered adequate, and genomes should generally be at least 90% complete.
 
 **Quast:** Quast produces a number of summary statistics that are useful in assessing the quality of your genomes as well. The two measures we are specifically interested in are the numbers of [contigs](https://en.wikipedia.org/wiki/Contig), and the [N50 score](https://en.wikipedia.org/wiki/N50,_L50,_and_related_statistics#N50). More information about quast can be found [here](https://github.com/ablab/quast#genome-assembly-evaluation-tool). 
+
+To install Quast using conda, copy and paste the code below after setting up and activating a Quast environment:
+
+```
+conda install -c bioconda quast
+```
+
+Once the conda environment is activated, an example of how Quast might be executed can be found below:
 
 **VISUALIZATION TOOLS**
 
