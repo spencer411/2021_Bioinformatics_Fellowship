@@ -30,7 +30,9 @@ This dataset consists of genome sequences for 63 Livestock-associated MRSA isola
 6. Methicillin-resistant _Staphylococcus aureus_ ST5 isolates from a U.S. Hospital.
 This dataset consists of 50 clinical MRSA isolates from humans with MRSA-related disease. You can reads more about the genomes here: [Hau_et_al_2.pdf](https://github.com/spencer411/2021_Bioinformatics_Fellowship/files/6592663/Hau_et_al_2.pdf)
 
-7.
+7._Streptococcus mitis_ strains isolated from a woman and her male sexual partner.
+This dataset includes 39 genomes isolated from the oral cavity and urogenital tract of a woman and her partner. _Streptococcus mitis_ is common in humans and is considered to be a commensal species, but may also cause a variety of invasive diseases in human. You can read more about the genomes here: [Mores_et_al.pdf](https://github.com/spencer411/2021_Bioinformatics_Fellowship/files/6592768/Mores_et_al.pdf)
+
 
 
 
