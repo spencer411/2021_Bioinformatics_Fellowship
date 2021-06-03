@@ -10,7 +10,7 @@ Our intention is to make this github site available indefinitely as a resource f
 
 **DATASETS**
 
-There are 8 datasets with pre-downloaded and assembled genomes to choose from. A short description of each dataset and a link to the associated publication can be found below. A folder containing the genomes for each dataset can be accesed on the server at the following location (path/to/genome/folders)
+There are 8 datasets with pre-downloaded and assembled genomes to choose from. A short description of each dataset and a link to the associated publication can be found below. A folder containing the genomes for each dataset can be accesed on the server at the following location (network/rit/path/to/genome/folders)
 
 1. _Lactobacillales_ isolates from the International Space Station.
 This dataset consists of 19 _Lactobacillales_ isolates. Members of this genus (_Enterococcus_) have the potential to be pathogenic and carry antibotic resistance genes. You can read more about the genomes collected on the space station here: [Bharadwaj_et_al.pdf](https://github.com/spencer411/2021_Bioinformatics_Fellowship/files/6591772/Bharadwaj_et_al.pdf)
