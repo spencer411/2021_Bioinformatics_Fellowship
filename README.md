@@ -17,6 +17,7 @@ This dataset consists of 19 _Lactobacillales_ isolates. Members of this genus (_
 
 For further information related to these isolates including Biosample accessions (that include metadata) feel free to access the following links below:
 https://www.ncbi.nlm.nih.gov/bioproject/PRJNA645454
+
 https://www.ncbi.nlm.nih.gov/bioproject/PRJNA649272
 
 
