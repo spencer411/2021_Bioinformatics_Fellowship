@@ -77,12 +77,16 @@ conda install -c bioconda quast
 Once the conda environment is activated, an example of how Quast might be executed in a folder full of genomes can be found below:
 
 ```
-for FILE in *.fa; do quast.py $FILE; done
+quast.py *.fa
 ```
+
+Note that quast produces a folder named "quast_results". In the results folder you will find a report.tsv file. This file can be opened in excel and provides the user with many useful metrics including both the number of contigs, and N50 score. 
+
+Ideally your genomes will have less than 200 contigs and an N50 score greater than 40,000 bp.
 
 **VISUALIZATION TOOLS**
 
 
 
 
-
+for FILE in *.fa; do prokka $FILE; done
