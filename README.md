@@ -21,7 +21,9 @@ This dataset consists of 30 _S. Enteritidis_ isolates originating from both pati
 This dataset consists of 64 type strains representing 50 species in the genus _Staphylococcus_ from the National Collection of Type Cultures, United
 Kingdom (NCTC), Deutsche Sammlung von Mikroorganismen und Zellkulturen, Germany(DSMZ), and Culture Collection, University of Göteborg, Sweden (CCUG). You can read more about the genomes here: [Cole_et_al.pdf](https://github.com/spencer411/2021_Bioinformatics_Fellowship/files/6592256/Cole_et_al.pdf)
 
-4.
+4. _Bacillaceae_ strains isolated from the International Space Station.
+This dataset consists of 29 bacterial isolates from the family _Bacillaceae_. Members of this group are common, and can be found in soil, sediments, air, freshwater, marine ecosystems, foods and in extreme environments with high temperatures. You can read more about the genomes collected on the space station here: [Daudu_et_al.pdf](https://github.com/spencer411/2021_Bioinformatics_Fellowship/files/6592307/Daudu_et_al.pdf)
+
 
 
 
