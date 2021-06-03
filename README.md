@@ -7,3 +7,9 @@
 This github page serves as a resource for students during project 2 of the UAlbany Summer Bioninformatis Fellowship. Students can find information on the datasets available to them as well as tools for analysis and visualization here.
 
 Our intention is to make this github site available indefinitely as a resource for ongoing and future projects.
+
+**DATASETS**
+
+There are 8 datasets with pre-downloaded and assembled genomes to choose from. A short description of each dataset and a link to the associated publication can be found below. A folder containing the genomes for each dataset can be accesed on the server at the following location (path/to/genome/folders)
+
+1.
