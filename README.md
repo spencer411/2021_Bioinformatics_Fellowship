@@ -44,7 +44,7 @@ One of the first steps in analyzing genomic data is to make sure your data is of
 
 **CheckM:** CheckM can be used to determine the completeness and level of contaimtination in each of your genomes and allows for a taxon specific workflow. More information about checkM can be found [here](https://github.com/Ecogenomics/CheckM/wiki/Introduction#about).
 
-To install CheckM using conda, copy and paste the code below after setting up and activating the conda CheckM environment:
+To install CheckM using conda, copy and paste the code below after setting up and activating the CheckM conda environment:
 
 ```
 conda install -c bioconda checkm-genome
@@ -68,7 +68,7 @@ Completeness and contamination will be written directly to your output file. Usu
 
 **Quast:** Quast produces a number of summary statistics that are useful in assessing the quality of your genomes as well. The two measures we are specifically interested in are the numbers of [contigs](https://en.wikipedia.org/wiki/Contig), and the [N50 score](https://en.wikipedia.org/wiki/N50,_L50,_and_related_statistics#N50). More information about quast can be found [here](https://github.com/ablab/quast#genome-assembly-evaluation-tool). 
 
-To install Quast using conda, copy and paste the code below after setting up and activating the conda Quast environment:
+To install Quast using conda, copy and paste the code below after setting up and activating the Quast conda environment:
 
 ```
 conda install -c bioconda quast
@@ -85,6 +85,10 @@ The code above is simply telling quast to run on every file in the folder ending
 Note that quast produces a folder named "quast_results". In the results folder you will find a report.tsv file. This file can be opened in excel and provides the user with many useful metrics including both the number of contigs, and N50 score. 
 
 Ideally your genomes will have less than 200 contigs and an N50 score greater than 40,000 bp.
+
+_**Average Nucleotide Identities**_
+
+
 
 _**Annotation**_
 
@@ -105,20 +109,14 @@ Once the conda environment is activated, an example of how Prokka might be execu
 for file in *.fa; do tag=${file%.fa}; prokka --prefix "$tag" --genus Salmonella --outdir "$tag"_prokka $file; done
 ```
 
-The code above is a bit complicated because of the prefix and outdirectory names whiche we are setting "tag" which is the filename minus the extension. So for example, if you were running this on a single genome it would look like this:
+The code above is a bit complicated because of the prefix and outdirectory names. To get rid of the extension for these names we are using "tag" which is the filename minus the extension (e.g. tag=${file%.fa}). So for example, if you were running this on a single genome it would look like this:
 
 ```
 prokka --prefix genome_1 --genus Salmonella --outdir genome_1_prokka genome_1.fa
 ```
 
+The --genus option above needs to be manipulated based on the species you are examining.
 
 
 
 **VISUALIZATION TOOLS**
-
-for FILE in *.fa; do prokka --outdir prokka --genus Salmonella --prefix $FILE%%.* $FILE; done
-
-
-for FILE in *.fa; do prokka $FILE; done
-
-for file in *.fa; do tag=${file%.fa}; prokka --prefix "$tag" --genus Salmonella --outdir "$tag"_prokka; done
