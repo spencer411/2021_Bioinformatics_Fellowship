@@ -12,15 +12,13 @@ Our intention is to make this github site available indefinitely as a resource f
 
 There are 8 datasets with pre-downloaded and assembled genomes to choose from. A short description of each dataset and a link to the associated publication can be found below. A folder containing the genomes for each dataset can be accesed on the server at the following location (path/to/genome/folders)
 
-1. _Lactobacillales_ isolates from the International space station.
+1. _Lactobacillales_ isolates from the International Space Station.
 This dataset consists of 19 _Lactobacillales_ isolates. Members of this genus (_Enterococcus_) have the potential to be pathogenic and carry antibotic resistance genes. You can read more about the genomes collected on the space station here: [Bharadwaj_et_al.pdf](https://github.com/spencer411/2021_Bioinformatics_Fellowship/files/6591772/Bharadwaj_et_al.pdf)
 
-For further information related to these isolates including Biosample accessions (which includes metadata) feel free to access the following links below:
+2. _Salmonella enterica_ Serovar Enteritidis isolates associated with outbreaks in Brazil.
+This dataset consists of 30 _S. Enteritidis_ isolates originating from both patients and food sources during outbreaks that occured between 1999 and 2006 in Brazil. You can read more about the genomes here: [Cao_et_al.pdf](https://github.com/spencer411/2021_Bioinformatics_Fellowship/files/6592061/Cao_et_al.pdf)
 
-https://www.ncbi.nlm.nih.gov/bioproject/PRJNA645454
-
-https://www.ncbi.nlm.nih.gov/bioproject/PRJNA649272
-
+3. 
 
 
 
