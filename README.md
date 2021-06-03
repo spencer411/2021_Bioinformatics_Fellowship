@@ -1,5 +1,4 @@
 # 2021 UAlbany Bioinformatics Fellowship
-
 <img width="479" alt="Screen Shot 2021-06-01 at 1 24 25 PM" src="https://user-images.githubusercontent.com/43999021/120365648-b5958200-c2dc-11eb-8646-2845387692f8.png">
 
 **PROJECT 2 RESOURCES**
