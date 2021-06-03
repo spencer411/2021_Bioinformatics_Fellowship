@@ -44,7 +44,7 @@ One of the first steps in analyzing genomic data is to make sure your data is of
 
 **CheckM:** CheckM can be used to determine the completeness and level of contaimtination in each of your genomes and allows for a taxon specific workflow. More information about checkM can be found [here](https://github.com/Ecogenomics/CheckM/wiki/Introduction#about).
 
-To install CheckM using conda, copy and paste the code below after setting up and activating a CheckM environment:
+To install CheckM using conda, copy and paste the code below after setting up and activating the conda CheckM environment:
 
 ```
 conda install -c bioconda checkm-genome
@@ -68,7 +68,7 @@ Completeness and contamination will be written directly to your output file. Usu
 
 **Quast:** Quast produces a number of summary statistics that are useful in assessing the quality of your genomes as well. The two measures we are specifically interested in are the numbers of [contigs](https://en.wikipedia.org/wiki/Contig), and the [N50 score](https://en.wikipedia.org/wiki/N50,_L50,_and_related_statistics#N50). More information about quast can be found [here](https://github.com/ablab/quast#genome-assembly-evaluation-tool). 
 
-To install Quast using conda, copy and paste the code below after setting up and activating a Quast environment:
+To install Quast using conda, copy and paste the code below after setting up and activating the conda Quast environment:
 
 ```
 conda install -c bioconda quast
@@ -87,13 +87,38 @@ Note that quast produces a folder named "quast_results". In the results folder y
 Ideally your genomes will have less than 200 contigs and an N50 score greater than 40,000 bp.
 
 _**Annotation**_
+
 Now that we have successfully checked for bad genomes in our dataset, and hopefully removed them, we can now move on to some more interesting analyses. Once of the first things we will want to do with our genomes is annotate them. Annotation is the the process of identifying features of interest in our genomes, which in our case is genes. Although there are several tools for this sort of analysis, we will use the most popular:
 
-**Prokka:** Whole genome annotation is the process of identifying features of interest in a set of genomic DNA sequences, and labelling them with useful information. Prokka is a software tool to annotate bacterial, archaeal and viral genomes quickly and produce standards-compliant output files. More information about Prokka can be found [here](https://pubmed.ncbi.nlm.nih.gov/24642063/).
+**Prokka:** Whole genome annotation is the process of identifying features of interest in a set of genomic DNA sequences, and labelling them with useful information. Prokka is a software tool to annotate bacterial, archaeal and viral genomes quickly and produce standards-compliant output files. More detailed information about Prokka can be found [here](https://pubmed.ncbi.nlm.nih.gov/24642063/).
+
+
+To install Prokka using conda, copy and paste the code below after setting up and activating the Prokka conda environment:
+
+```
+conda install -c conda-forge -c bioconda -c defaults prokka
+```
+
+Once the conda environment is activated, an example of how Prokka might be executed in a folder full of genomes can be found below:
+
+```
+for file in *.fa; do tag=${file%.fa}; prokka --prefix "$tag" --genus Salmonella --outdir "$tag"_prokka $file; done
+```
+
+The code above is a bit complicated because of the prefix and outdirectory names whiche we are setting "tag" which is the filename minus the extension. So for example, if you were running this on a single genome it would look like this:
+
+```
+prokka --prefix genome_1 --genus Salmonella --outdir genome_1_prokka genome_1.fa
+```
+
+
+
 
 **VISUALIZATION TOOLS**
 
-
+for FILE in *.fa; do prokka --outdir prokka --genus Salmonella --prefix $FILE%%.* $FILE; done
 
 
 for FILE in *.fa; do prokka $FILE; done
+
+for file in *.fa; do tag=${file%.fa}; prokka --prefix "$tag" --genus Salmonella --outdir "$tag"_prokka; done
