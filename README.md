@@ -17,7 +17,7 @@ This dataset consists of 19 _Lactobacillales_ isolates. Members of this genus (_
 2. _Salmonella enterica_ Serovar Enteritidis isolates associated with outbreaks in Brazil.
 This dataset consists of 30 _S. Enteritidis_ isolates originating from both patients and food sources during outbreaks that occured between 1999 and 2006. You can read more about the genomes here: [Cao_et_al.pdf](https://github.com/spencer411/2021_Bioinformatics_Fellowship/files/6592061/Cao_et_al.pdf)
 
-3. Fifty species and 25 subspecies of the genus _Staphylococcus_.
+3. Species and subspecies of the genus _Staphylococcus_.
 This dataset consists of 64 type strains representing 50 species in the genus _Staphylococcus_ from the National Collection of Type Cultures, United
 Kingdom (NCTC), Deutsche Sammlung von Mikroorganismen und Zellkulturen, Germany(DSMZ), and Culture Collection, University of Göteborg, Sweden (CCUG). You can read more about the genomes here: [Cole_et_al.pdf](https://github.com/spencer411/2021_Bioinformatics_Fellowship/files/6592256/Cole_et_al.pdf)
 
