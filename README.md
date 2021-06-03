@@ -33,6 +33,10 @@ This dataset consists of 50 clinical MRSA isolates from humans with MRSA-related
 7. _Streptococcus mitis_ strains isolated from a woman and her male sexual partner.
 This dataset includes 39 genomes isolated from the oral cavity and urogenital tract of a woman and her partner. _Streptococcus mitis_ is common in humans and is considered to be a commensal species, but may also cause a variety of invasive diseases in human. You can read more about the genomes here: [Mores_et_al.pdf](https://github.com/spencer411/2021_Bioinformatics_Fellowship/files/6592768/Mores_et_al.pdf)
 
+8. Genome sequences of biosafety level 2 pathogens from the International Space Station.
+This dataset is comprised of 20 biosafety level 2 (BSL-2) opportunistic pathogens isolated from the environmental surfaces of the space station. BSL-2 pathogens pose a moderate health hazard. Examples of agents typically worked with in a BSL-2 environment include equine encephalitis viruses and HIV, as well as _Staphylococcus aureus_. You can read more about the genomes collected on the space station here: [Sielaff_et_al.pdf](https://github.com/spencer411/2021_Bioinformatics_Fellowship/files/6592801/Sielaff_et_al.pdf)
+
+**ANALYSIS TOOLS**
 
 
 
