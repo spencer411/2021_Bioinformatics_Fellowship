@@ -66,7 +66,7 @@ In the last line of code we are telling CheckM to assess the data we analyzed in
 
 Completeness and contamination will be written directly to your output file. Usually contamination at a levels of 5% or less is considered adequate, and genomes should generally be at least 90% complete.
 
-**Quast:** Quast produces a number of summary statistics that are useful in assessing the quality of your genomes as well. The two measures we are specifically interested in are the numbers of [contigs](https://en.wikipedia.org/wiki/Contig), and the [N50 score](https://en.wikipedia.org/wiki/N50,_L50,_and_related_statistics#N50). More information about quast can be found [here](https://github.com/ablab/quast#genome-assembly-evaluation-tool). 
+**Quast:** Quast produces a number of summary statistics that are useful in assessing the quality of your genomes as well. The two measures we are specifically interested in are the numbers of [contigs](https://en.wikipedia.org/wiki/Contig), and the [N50 score](https://en.wikipedia.org/wiki/N50,_L50,_and_related_statistics#N50). More information about Quast can be found [here](https://github.com/ablab/quast#genome-assembly-evaluation-tool). 
 
 To install Quast using conda, copy and paste the code below after setting up and activating the Quast conda environment:
 
@@ -113,14 +113,14 @@ ls *.fa > list1.txt
 If you are interested in comparing your samples to a reference genome, this can be done by using the following script:
 
 ```
-fastANI --ql list1.txt -r NZ_AP014944.fa -o fastani_refblast_schleif.txt
+fastANI --ql list1.txt -r NZ_AP014944.fa -o fastani_refANI_schleif.txt
 ```
 
-In the script above you are comparing your list against the reference genome NZ_AP014944.fa downloaded from NCBI.
+In the script above you are comparing your list against the reference genome NZ_AP014944.fa (downloaded from NCBI). The output is written to fastani_refANI_schleif.txt file.
 
 _**Annotation**_
 
-Now that we have successfully checked for bad genomes in our dataset, and hopefully removed them, we can now move on to some more interesting analyses. Once of the first things we will want to do with our genomes is annotate them. Annotation is the the process of identifying features of interest in our genomes, which in our case is genes. Although there are several tools for this sort of analysis, we will use the most popular:
+Now that we have successfully checked for bad genomes in our dataset, and hopefully removed them, we can move on to some more interesting analyses. One of the first things we will want to do with our genomes is annotate them. Annotation is the the process of identifying features of interest in our genomes, which in our case is genes. Although there are several tools for this sort of analysis, we will use the most popular:
 
 **Prokka:** Whole genome annotation is the process of identifying features of interest in a set of genomic DNA sequences, and labelling them with useful information. Prokka is a software tool to annotate bacterial, archaeal and viral genomes quickly and produce standards-compliant output files. More detailed information about Prokka can be found [here](https://pubmed.ncbi.nlm.nih.gov/24642063/).
 
