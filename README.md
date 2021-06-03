@@ -153,7 +153,7 @@ mv **/*.gff annotations
 
 _**Pan-Genome Analysis**_
 
-Now we come to one of the more interesting analyses we can carry out on our combined data set. That is a [Pan-genome] (https://en.wikipedia.org/wiki/Pan-genome) analysis. A pan-genome can be defined as the entire gene content belonging to a study group. The pan-genome consists of core genes (genes shared by all isolates), and accessory genes (genes only present in specific groups or individuals). Here you can choose between two of the most commonly used programs for such an analysis:
+Now we come to one of the more interesting analyses we can carry out on our combined data set. That is a [Pan-genome](https://en.wikipedia.org/wiki/Pan-genome) analysis. A pan-genome can be defined as the entire gene content belonging to a study group. The pan-genome consists of core genes (genes shared by all isolates), and accessory genes (genes only present in specific groups or individuals). Here you can choose between two of the most commonly used programs for such an analysis:
 
 
 
