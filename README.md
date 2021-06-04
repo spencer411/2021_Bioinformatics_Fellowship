@@ -153,7 +153,26 @@ mv **/*.gff annotations
 
 _**Pan-Genome Analysis**_
 
-Now we come to one of the more interesting analyses we can carry out on our combined data set. That is a [Pan-genome](https://en.wikipedia.org/wiki/Pan-genome) analysis. A pan-genome can be defined as the entire gene content belonging to a study group. The pan-genome consists of core genes (genes shared by all isolates), and accessory genes (genes only present in specific groups or individuals). Here you can choose between two of the most commonly used programs for such an analysis:
+Now we come to one of the more interesting analyses we can carry out on our combined data set. That is a [Pan-genome](https://en.wikipedia.org/wiki/Pan-genome) analysis. A pan-genome can be defined as the entire gene content belonging to a study group. The pan-genome consists of core genes (genes shared by all isolates), shell genes (genes present in the majority of isolates, but not shared by the entire group), and cloud genes (genes present in only a few, or even one isolate). Here you can choose between two of the most commonly used programs for such an analysis:
+
+**Roary:** Roary is a high speed stand alone pan genome pipeline, which takes annotated assemblies in .gff format (produced by Prokka) and calculates the pan genome. More detailed information about Roary can be found [here](https://github.com/sanger-pathogens/Roary#introduction).
+
+
+To install Roary using conda, copy and paste the code below after creating and activating the Roary conda environment:
+
+```
+conda install -c bioconda roary
+```
+
+Once the conda environment is activated, an example of how Roary might be executed in a folder full of .gff files can be found below:
+
+```
+roary -e --mafft -p 16 *.gff
+```
+
+The code above is telling roary to run and build a core gene alignment using the program mafft (-e --mafft) using 16 threads (-p 16) and utilizing all .gff files in the folder (*.gff). Roary produces a large number of ouput files for downstream analysis and visualization. Feel free to open these files in excel or a text editor to get a better sense of what they are (but some of them are very large, so you might want to move them to your desktop first). More information on the output files and what you can do with them can be found [here](https://sanger-pathogens.github.io/Roary/). Of particular interest will be the core genome alignment (ending in .aln) which can be used to create a phylogenetic tree, but more on that later.
+
+**Panaroo:** Like Roary, Panaroo is a high speed stand alone pan genome pipeline, which takes annotated assemblies in .gff format (produced by Prokka) and calculates the pan genome. The major difference between the two algorithms is that Panaroo is a graph-based pangenome clustering tool that is able to account for many of the sources of error introduced during the annotation of prokaryotic genome assemblies. More detailed information about Panaroo can be found [here](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02090-4).
 
 
 
