@@ -118,7 +118,8 @@ fastANI --ql list1.txt -r NZ_AP014944.fa -o fastani_refANI_schleif.txt
 
 In the script above you are comparing your list against the reference genome NZ_AP014944.fa (downloaded from NCBI). The output is written to fastani_refANI_schleif.txt file.
 
-_**Antibiotic Resistance, Virulence and More!**_
+_**Antibiotic Resistance and Virulence**_
+
 One of the ways we can understand more about our genomes is by identifying genes associated with pathogenecity and resistance to antibiotics. By comparing our seqeuences to databases that contain the sequences of known anitbiotic genes and virulence factors, we can identify these characteristics in our own genomes. There are several different ways to do this, but here we will use one of them most efficient and user freidnly tools to do so:
 
 **ABRicate** ABRicate is a tool for the mass screening of contigs for antimicrobial resistance or virulence genes, and it comes bundled with multiple databases. You can read more about ABRicate [here](https://github.com/tseemann/abricate).
