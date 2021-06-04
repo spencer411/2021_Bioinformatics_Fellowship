@@ -118,6 +118,33 @@ fastANI --ql list1.txt -r NZ_AP014944.fa -o fastani_refANI_schleif.txt
 
 In the script above you are comparing your list against the reference genome NZ_AP014944.fa (downloaded from NCBI). The output is written to fastani_refANI_schleif.txt file.
 
+_**Antibiotic Resistance, Virulence and More!**_
+One of the ways we can understand more about our genomes is by identifying genes associated with pathogenecity and resistance to antibiotics. By comparing our seqeuences to databases that contain the sequences of known anitbiotic genes and virulence factors, we can identify these characteristics in our own genomes. There are several different ways to do this, but here we will use one of them most efficient and user freidnly tools to do so:
+
+**ABRicate** ABRicate is a tool for the mass screening of contigs for antimicrobial resistance or virulence genes, and it comes bundled with multiple databases. You can read more about ABRicate [here](https://github.com/tseemann/abricate).
+
+To install ABRicate using conda, copy and paste the code below after creating and activating the ABRicate conda environment:
+
+```
+conda install -c conda-forge -c bioconda -c defaults abricate
+```
+
+Once the conda environment is activated, an example of how ABRicate might be executed to determine antibiotic resistance using the [CARD](https://card.mcmaster.ca/) databse in a folder full of genomes can be found below:
+
+```
+abricate --db card --quiet *.fa > abricate_amr_results.tab
+abricate --summary abricate_amr_results.tab > abricate_amr_summary.tab
+```
+
+In the first line of the above script we are we are getting full results on the antibiotic resistance genes present in each genome, whereas in the second line we are combining those results in a single output file (abricate_amr_summary.tab). This file contains percentages that describe matches for each ABR gene found in each genome. There are actually 9 different databases to choose from when running this program, you can learn more about them [here](https://github.com/tseemann/abricate#databases). So for example, if you wanted to screen your genomes against the virulence factor database (VFDB), you would do the following:
+
+```
+abricate --db vfdb --quiet *.fa > abricate_vfdb_results.tab
+abricate --summary abricate_vfdb_results.tab > abricate_vfdb_summary.tab
+```
+
+The data created by ABRicate can be extremely informative when combined with a phylogenetic tree (see more on that below). There are also instructions on how that can be done below in the Visualization Tools section.
+
 _**Annotation**_
 
 Now that we have successfully checked for bad genomes in our dataset, and hopefully removed them, we can move on to some more interesting analyses. One of the first things we will want to do with our genomes is annotate them. Annotation is the the process of identifying features of interest in our genomes, which in our case is genes. Although there are several tools for this sort of analysis, we will use the most popular:
@@ -232,6 +259,5 @@ The code above will run an algorithm to determine the best tree based on variabl
 Once you have FigTree installed you can open it and import your tree by clicking File > Open, and there is your tree! We will want to properly root our tree using FigTree. To do so click Tree > Midpoint Root. As you can see this organizes your tree in a more readable way. Now that our tree is properly rooted we can export it. To do so go to File > Export Trees. At the prompt select Newick from the dropdown menu and click "Save as currently displayed. Name it something like "my_tree.tre".
 
 Now that you have a phylogenetic tree, you will likely want to annotate it with data. See more about that in the visualization section below.
-
 
 **VISUALIZATION TOOLS**
