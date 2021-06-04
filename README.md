@@ -44,7 +44,7 @@ One of the first steps in analyzing genomic data is to make sure your data is of
 
 **CheckM:** CheckM can be used to determine the completeness and level of contaimtination in each of your genomes and allows for a taxon specific workflow. More information about checkM can be found [here](https://github.com/Ecogenomics/CheckM/wiki/Introduction#about).
 
-To install CheckM using conda, copy and paste the code below after setting up and activating the CheckM conda environment:
+To install CheckM using conda, copy and paste the code below after creating and activating the CheckM conda environment:
 
 ```
 conda install -c bioconda checkm-genome
@@ -68,7 +68,7 @@ Completeness and contamination will be written directly to your output file. Usu
 
 **Quast:** Quast produces a number of summary statistics that are useful in assessing the quality of your genomes as well. The two measures we are specifically interested in are the numbers of [contigs](https://en.wikipedia.org/wiki/Contig), and the [N50 score](https://en.wikipedia.org/wiki/N50,_L50,_and_related_statistics#N50). More information about Quast can be found [here](https://github.com/ablab/quast#genome-assembly-evaluation-tool). 
 
-To install Quast using conda, copy and paste the code below after setting up and activating the Quast conda environment:
+To install Quast using conda, copy and paste the code below after creating and activating the Quast conda environment:
 
 ```
 conda install -c bioconda quast
@@ -92,7 +92,7 @@ The average nucleotide identity (ANI) is a similarity index between a given pair
 
 **FastANI:** FastANI is developed for fast alignment-free computation of whole-genome Average Nucleotide Identity (ANI). ANI is defined as mean nucleotide identity of orthologous gene pairs shared between two microbial genomes. FastANI supports pairwise comparison of both complete and draft genome assemblies. More detailed information about FastANI can be found [here](https://github.com/ParBLiSS/FastANI#fastani).
 
-To install FastANI using conda, copy and paste the code below after setting up and activating the FastANI conda environment:
+To install FastANI using conda, copy and paste the code below after creating and activating the FastANI conda environment:
 
 ```
 conda install -c bioconda fastani
@@ -125,7 +125,7 @@ Now that we have successfully checked for bad genomes in our dataset, and hopefu
 **Prokka:** Whole genome annotation is the process of identifying features of interest in a set of genomic DNA sequences, and labelling them with useful information. Prokka is a software tool to annotate bacterial, archaeal and viral genomes quickly and produce standards-compliant output files. More detailed information about Prokka can be found [here](https://pubmed.ncbi.nlm.nih.gov/24642063/).
 
 
-To install Prokka using conda, copy and paste the code below after setting up and activating the Prokka conda environment:
+To install Prokka using conda, copy and paste the code below after creating and activating the Prokka conda environment:
 
 ```
 conda install -c conda-forge -c bioconda -c defaults prokka
@@ -191,7 +191,9 @@ The code above is telling Panaroo to run using 16 threads (-t 16) utilizing all 
 
 _**Tree Building**_
 
-Building a [phylogenetic tree](https://en.wikipedia.org/wiki/Phylogenetic_tree) is one of the most informative ways to display genomic data when examining groups of isolates. To build a phylogentic tree you will need a core alignment file produced by either Roary or Panaroo above. These alignment files are huge, as they contain the entire genome sequence for each isolate examined, aligned. Phylogenetic trees are built on genetic differences among genome sequences, therefore all wee need to build a phylogenetic tree is the variable sites from the alignment file. We can easily extract those sites using snp-sites. Snp-sites extracts single nucleotide polymorphisms ([SNPs](https://en.wikipedia.org/wiki/Single-nucleotide_polymorphism)) from a large whole genome alignment. You can read more about snp-sites [here](https://github.com/sanger-pathogens/snp-sites#introduction).
+Building a [phylogenetic tree](https://en.wikipedia.org/wiki/Phylogenetic_tree) is one of the most informative ways to display genomic data when examining groups of isolates. To build a phylogentic tree you will need a core alignment file produced by either Roary or Panaroo above. These alignment files are huge, as they contain the entire genome sequence for each isolate examined, aligned. Phylogenetic trees are built on genetic differences among genome sequences, therefore all wee need to build a phylogenetic tree is the variable sites from the alignment file. We can easily extract those sites using snp-sites. 
+
+**snp-sites** Snp-sites extracts single nucleotide polymorphisms ([SNPs](https://en.wikipedia.org/wiki/Single-nucleotide_polymorphism)) from a large whole genome alignment. You can read more about snp-sites [here](https://github.com/sanger-pathogens/snp-sites#introduction).
 
 To install snp-sites using conda, copy and paste the code below after creating and activating the snp-sites conda environment:
 
@@ -206,7 +208,30 @@ Once the conda environment is activated, you can process your .aln file produced
 snp-sites core_alignment.aln -p -o core_alignement.phy
 ```
 
-This will create a phyllip format (.phy) file with only variable sites which can be used in the next step to build a maximum liklihood tree. To build a maximum liklihood tree we are going use 
+This will create a phyllip format (.phy) file with only variable sites which can be used in the next step to build a [maximum liklihood tree](https://en.wikipedia.org/wiki/Computational_phylogenetics#Maximum_likelihood). To build a maximum liklihood tree we are going use 
+RAxML.
+
+**RAxML** RAxML is a program for sequential and parallel Maximum Likelihood based inference of large phylogenetic trees. It can also be used for postanalyses of sets of phylogenetic trees, analyses of alignments and, evolutionary placement of short
+reads. To read more about RAxML click [here](https://academic.oup.com/bioinformatics/article/30/9/1312/238053?login=true).
+
+To install RAxML using conda, copy and paste the code below after creating and activating the RAxML conda environment:
+
+```
+conda install -c bioconda raxml
+```
+
+Once the conda environment is activated, you can build your tree using the file created by snp-sites using the code below:
+
+```
+raxmlHPC -T 16 -s core_alignement.phy -p 12345 -m GTRGAMMA -n raxml_core_output 
+```
+The code above will run an algorithm to determine the best tree based on variable sites within your data (SNPs). It will create multiple output files, but the one you are interested will have the word "best" in it. In this example it would read "RAxML_bestTree.raxml_core_output". Now that you've built a tree you can open it in a tree viewer, and arrange it appropriately. For that we will use FigTree.
+
+**FigTree** FigTree is designed as a graphical viewer of phylogenetic trees and as a program for producing publication-ready figures. Unlike all of the other programs we have used so far FigTree has a graphical user interface (GUI), which just means it is a regular program you donload and install on your computer. You can get the latest version [here](https://github.com/rambaut/figtree/releases).
+
+Once you have FigTree installed you can open it and import your tree by clicking File > Open, and there is your tree! We will want to properly root our tree using FigTree. To do so click Tree > Midpoint Root. As you can see this organizes your tree in a more readable way. Now that our tree is properly rooted we can export it. To do so go to File > Export Trees. At the prompt select Newick from the dropdown menu and click "Save as currently displayed. Name it something like "my_tree.tre".
+
+Now that you have a phylogenetic tree, you will likely want to annotate it with data. See more about that in the visualization section below.
 
 
 **VISUALIZATION TOOLS**
