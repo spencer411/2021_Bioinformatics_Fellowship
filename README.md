@@ -170,10 +170,43 @@ Once the conda environment is activated, an example of how Roary might be execut
 roary -e --mafft -p 16 *.gff
 ```
 
-The code above is telling roary to run and build a core gene alignment using the program mafft (-e --mafft) using 16 threads (-p 16) and utilizing all .gff files in the folder (*.gff). Roary produces a large number of ouput files for downstream analysis and visualization. Feel free to open these files in excel or a text editor to get a better sense of what they are (but some of them are very large, so you might want to move them to your desktop first). More information on the output files and what you can do with them can be found [here](https://sanger-pathogens.github.io/Roary/). Of particular interest will be the core genome alignment (ending in .aln) which can be used to create a phylogenetic tree, but more on that later.
+The code above is telling Roary to run and build a core gene alignment using the program mafft (-e --mafft) using 16 threads (-p 16) and utilizing all .gff files in the folder (*.gff). Roary produces a large number of ouput files for downstream analysis and visualization. Feel free to open these files in excel or a text editor to get a better sense of what they are (but some of them are very large, so you might want to move them to your desktop first). More information on the output files and what you can do with them can be found [here](https://sanger-pathogens.github.io/Roary/). Of particular interest will be the core genome alignment (ending in .aln) which can be used to create a phylogenetic tree, but more on that later.
 
 **Panaroo:** Like Roary, Panaroo is a high speed stand alone pan genome pipeline, which takes annotated assemblies in .gff format (produced by Prokka) and calculates the pan genome. The major difference between the two algorithms is that Panaroo is a graph-based pangenome clustering tool that is able to account for many of the sources of error introduced during the annotation of prokaryotic genome assemblies. More detailed information about Panaroo can be found [here](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02090-4).
 
+To install Panaroo using conda, copy and paste the code below after creating and activating the Panaroo conda environment:
+
+```
+conda install -c bioconda panaroo
+
+```
+
+Once the conda environment is activated, an example of how Panaroo might be executed in a folder full of .gff files can be found below:
+
+```
+panaroo -t 16 -i *.gff -o panaroo_results --clean-mode strict -a core
+```
+
+The code above is telling Panaroo to run using 16 threads (-t 16) utilizing all .gff files in the folder (*.gff). It is also telling Panaroo to wrtite the results to the folder panaroo_results (-o), using strict filtering (--clean-mode strict), and to create a core genome alignment (-a). Like Roary, Panaroo produces a large number of output files for downstream analysis and visualization. In fact the majority of these output files are formatted identically. Therefore you can use the [link](https://sanger-pathogens.github.io/Roary/) provided above from Roary to understand more about the output files and what you can with them. Again, of particular interest will be the core genome alignment (ending in .aln) which can be used to create a phylogenetic tree (see next step).
+
+_**Tree Building**_
+
+Building a [phylogenetic tree](https://en.wikipedia.org/wiki/Phylogenetic_tree#:~:text=A%20phylogenetic%20tree%20(also%20phylogeny,their%20physical%20or%20genetic%20characteristics.) is one of the most informative ways to display genomic data when examining groups of isolates. To build a phylogentic tree you will need a core alignment file produced by either Roary or Panaroo above. These alignment files are huge, as they contain the entire genome sequence for each isolate examined, aligned. Phylogenetic trees are built on genetic differences among genome sequences, therefore all wee need to build a phylogenetic tree is the variable sites from the alignment file. We can easily extract those sites using snp-sites. Snp-sites extracts single nucleotide polymorphisms (SNPs) from a large whole genome alignment. You can read more about snp-sites [here](https://github.com/sanger-pathogens/snp-sites#introduction).
+
+To install snp-sites using conda, copy and paste the code below after creating and activating the snp-sites conda environment:
+
+```
+conda install -c bioconda snp-sites
+
+```
+
+Once the conda environment is activated, you can process your .aln file produced by Roary or Panaroo using the code below:
+
+```
+snp-sites core_alignment.aln -p -o core_alignement.phy
+```
+
+This will create a phyllip format (.phy) file with only variable sites which can be used in the next step to build a maximum liklihood tree. To build a maximum liklihood tree we are going use 
 
 
 **VISUALIZATION TOOLS**
