@@ -262,3 +262,8 @@ Once you have FigTree installed you can open it and import your tree by clicking
 Now that you have a phylogenetic tree, you will likely want to annotate it with data. See more about that in the visualization section below.
 
 **VISUALIZATION TOOLS**
+
+Hopefully at this point you have a acquired a large amount of data and are interested in visualizing that data. This is how scientists really communicate the results of their work. Below is a mix of very specific tools (based on the analyses from above), along with some more general tools (that may be used to transform your data into figures that you conceive).
+
+
+
