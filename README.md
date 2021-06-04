@@ -263,7 +263,15 @@ Now that you have a phylogenetic tree, you will likely want to annotate it with 
 
 **VISUALIZATION TOOLS**
 
-Hopefully at this point you have a acquired a large amount of data and are interested in visualizing that data. This is how scientists really communicate the results of their work. Below is a mix of very specific tools (based on the analyses from above), along with some more general tools (that may be used to transform your data into figures that you conceive).
+Hopefully at this point you have a acquired a large amount of data and are interested in visualizing that data. This is how scientists really communicate the results of their work. Below is a mix of general tools (that may be used to transform your data into figures that you conceive), along with some very specific tools (based on the analyses from above). We will start with the general:
 
+**Visualizations With R**
 
+**Interactive Tree Of Life**
+
+**Making a FastANI Heatmap**
+
+**Pan-genome Visulations**
+
+**Combining Trees and Data**
 
