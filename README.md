@@ -13,9 +13,9 @@ Our intention is to make this GitHub site available indefinitely as a resource f
 | [DATA ANALYSIS TOOLS](#data-analysis-tools)                             |
 | [Quality Control](#quality-control)                                      | 
 | [Average Nucleotide Identity](#average-nucleotide-identity)                          |
-| [Antibiotic Resistance and Virulence] (#antibiotic-resistance-and-virulence)                  |
+| [Antibiotic Resistance and Virulence](#antibiotic-resistance-and-virulence)                  |
 | [Annotation](#annotation)                                           |
-| [Pan-Genome Analysis] (#pan-genome-analysis)                                  |
+| [Pan-Genome Analysis](#pan-genome-analysis)                                  |
 | Tree Building                                        |
 | [VISUALIZATION TOOLS](#visualization-tools)                              |
 | Visualizations with R                                |
