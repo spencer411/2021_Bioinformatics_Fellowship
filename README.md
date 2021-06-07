@@ -9,7 +9,7 @@ Our intention is to make this GitHub site available indefinitely as a resource f
 
 | **CONTENTS**                                         |
 | -----------------------------------------------------|
-| **[DATASETS](**datasets**)**                                         |
+| **[DATASETS](# datasets)**                                         |
 | **DATA ANALYSIS TOOLS**                              |
 | Quality Control                                      | 
 | Average Nucleotide Identity                          |
@@ -24,7 +24,7 @@ Our intention is to make this GitHub site available indefinitely as a resource f
 | Pan-genome Visualizations                            |
 | Combining Tree and Data                              |
 
-**DATASETS**
+# **DATASETS**
 
 There are 8 datasets with pre-downloaded and assembled genomes to choose from. A short description of each dataset and a link to the associated publication can be found below. A folder containing the genomes for each dataset can be accessed on the server at the following location (network/rit/path/to/genome/folders)
 
