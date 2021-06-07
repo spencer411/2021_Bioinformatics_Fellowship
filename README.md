@@ -6,7 +6,8 @@
 This GitHub page serves as a resource for students during project 2 of the UAlbany Summer Bioinformatics Fellowship. Students can find information on the datasets available to them as well as tools for analysis and visualization here.
 
 Our intention is to make this GitHub site available indefinitely as a resource for ongoing and future projects.
-
+| **CONTENTS**                                         |
+| -----------------------------------------------------|
 | **DATASETS**                                         |
 | **DATA ANALYSIS TOOLS**                              |
 | Quality Control                                      | 
