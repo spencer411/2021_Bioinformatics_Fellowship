@@ -9,8 +9,8 @@ Our intention is to make this GitHub site available indefinitely as a resource f
 
 | **CONTENTS**                                         |
 | -----------------------------------------------------|
-| [**DATASETS**](#datasets)                            |
-| **DATA ANALYSIS TOOLS**                              |
+| [DATASETS](#datasets)                            |
+| [DATA ANALYSIS TOOLS](#data-analysis-tools)                             |
 | Quality Control                                      | 
 | Average Nucleotide Identity                          |
 | Antibiotic Resistance and Virulence                  |
@@ -53,7 +53,7 @@ This dataset includes 39 genomes isolated from the oral cavity and urogenital tr
 8. Genome sequences of biosafety level 2 pathogens from the International Space Station.
 This dataset is comprised of 20 biosafety level 2 (BSL-2) opportunistic pathogens isolated from the environmental surfaces of the space station. BSL-2 pathogens pose a moderate health hazard. Examples of agents typically worked with in a BSL-2 environment include equine encephalitis viruses and HIV, as well as _Staphylococcus aureus_. You can read more about the genomes collected on the space station here: [Sielaff_et_al.pdf](https://github.com/spencer411/2021_Bioinformatics_Fellowship/files/6592801/Sielaff_et_al.pdf)
 
-**DATA ANALYSIS TOOLS**
+# DATA ANALYSIS TOOLS
 
 _**Quality Control**_
 
