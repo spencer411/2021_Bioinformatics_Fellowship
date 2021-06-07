@@ -267,10 +267,18 @@ Hopefully at this point you have a acquired a large amount of data and are inter
 
 **Visualizations With R** At this point in the course you should be familiar with R, and more specifcally R studio. There are a number of resources out there for making visualizations with R, but one of the best is the [R graph gallery](https://www.r-graph-gallery.com/). The R graph gallery not only provides inspiration in the form of beauitful visualizations, it also provides the code. One of the easiest ways to incorporate your own data into these graphs is to run the code for the graph you are interested in, see how they have the data set up, and than manipulate your data so it is set up the same way. Below are some of the visualization techniques you might consider using for your data:
 
-_Heatmaps_ A heatmap is a graphical representation of data where the individual values contained in a matrix are represented as colors. Heatmaps great for comparing things like ANI (specific code for that below), or differences in the number of antibiotic resistance or virulence factors.
+[_Heatmaps_](https://www.r-graph-gallery.com/heatmap) A heatmap is a graphical representation of data where the individual values contained in a matrix are represented as colors. Heatmaps great for comparing things like ANI (specific code for that below), or differences in the number of antibiotic resistance or virulence factors.
+
+
 
 
 **Interactive Tree Of Life (iTOL)**
+
+We have worked with iTOL to set up a shared account for this fellowship. 
+The user info is below: 
+
+username: bioinfo_2021
+password: ualbany
 
 **Making a FastANI Heatmap**
 
