@@ -285,6 +285,32 @@ username: bioinfo_2021 / password: ualbany
 
 **Making a FastANI Heatmap**
 
+One of the analysis techniques we looked at above was FastANI. FastANI allows you to calculate the average nulceotdie identity (ANI) between all pairs of genomes you are examining. This can be visualized nicely with the R code here:
+
+```
+library("reshape2")
+library("ComplexHeatmap")
+library("gplots")
+
+### get data, convert to matrix
+x <- read.csv("your_heatmap.csv")
+matrix <- acast(x, X~Y, value.var="ANI")
+
+### define the colors within 2 zones
+breaks = seq(min(matrix), max(1), length.out=100)
+gradient1 = colorpanel( sum( breaks[-1]<=95 ), "blue", "white" )
+gradient2 = colorpanel( sum( breaks[-1]>95 & breaks[-1]<=100), "white", "red" )
+
+hm.colors = c(gradient1, gradient2)
+heatmap.2(matrix, scale = "none", trace = "none", colors = "blue")
+```
+
+Prior to running this code, you should open your FastANI output in excel, remove the columns that are not needed, and rename the column headings X, Y and ANI so it looks like this:
+
+<img width="330" alt="Screen Shot 2021-06-07 at 11 06 48 AM" src="https://user-images.githubusercontent.com/43999021/121041139-7a81cb80-c780-11eb-807a-957cd05305bb.png">
+
+After doing so save your file as a .csv file, and you should beready to go.
+
 **Pan-genome Visulations**
 
 **Combining Trees and Data**
