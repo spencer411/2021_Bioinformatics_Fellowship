@@ -19,7 +19,7 @@ Our intention is to make this GitHub site available indefinitely as a resource f
 | [Tree Building](#tree-building)                                        |
 | [VISUALIZATION TOOLS](#visualization-tools)                              |
 | [Visualizations with R](#visualizations-with-r)                                |
-| [Building Trees With The Interactive Tree Of Life (iTOL)](building-trees-with-itol)|
+| [Building Trees With iTOL](#building-trees-with-itol)|
 | Making a FastANI Heatmap                             |
 | Pan-genome Visualizations                            |
 | Combining Tree and Data                              |
