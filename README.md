@@ -309,9 +309,23 @@ Prior to running this code, you should open your FastANI output in excel, remove
 
 <img width="330" alt="Screen Shot 2021-06-07 at 11 06 48 AM" src="https://user-images.githubusercontent.com/43999021/121041139-7a81cb80-c780-11eb-807a-957cd05305bb.png">
 
-After doing so save your file as a .csv file, and you should beready to go.
+After doing so, sort your ANI column by the highest value to the lowest, and save it as a .csv file. After that you should be ready to go!
 
 **Pan-genome Visulations**
+
+There are many tools out there to visualize the output of Roary or Panaroo along with a tree. Some of them (straight from the [Roary website](https://sanger-pathogens.github.io/Roary/)) are listed here:
+
+_**roary_plots.py**_ This contributed script by Marco Galardini is very useful. Additional details can be found [here](https://github.com/sanger-pathogens/Roary/tree/master/contrib/roary_plots) in the repository. It provides 3 figures, showing the tree compared to a matrix with the presence and absence of core and accessory genes. The next is an pie chart of the breakdown of genes and the number of isolate they are present in. And finally there is a graph with the frequency of genes versus the number of genomes.
+
+<img width="477" alt="Screen Shot 2021-06-07 at 11 12 58 AM" src="https://user-images.githubusercontent.com/43999021/121042243-7c985a00-c781-11eb-9876-0da6ae7243cc.png">
+
+By dropping the python script in the same folder as your gene_presence_absence.csv you can run the following code to create them:
+
+```
+roary_plots.py name_of_your_newick_tree_file.tre gene_presence_absence.csv
+```
+_**Interactive visualisation with Phandango**_ James Hadfield has produced the [Phandango website](http://jameshadfield.github.io/phandango/#/) which allows for interactive visualisation of the output of Roary. You can drag and drop the results into your web browser, then interactively play around with the data. There is an example data set from Roary on the website.
+
 
 **Combining Trees and Data**
 
