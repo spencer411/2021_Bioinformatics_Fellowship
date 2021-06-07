@@ -3,7 +3,7 @@
 
 **PROJECT 2 RESOURCES**
 
-This GitHub page serves as a resource for students during project 2 of the UAlbany Summer Bioinformatis Fellowship. Students can find information on the datasets available to them as well as tools for analysis and visualization here.
+This GitHub page serves as a resource for students during project 2 of the UAlbany Summer Bioinformatics Fellowship. Students can find information on the datasets available to them as well as tools for analysis and visualization here.
 
 Our intention is to make this GitHub site available indefinitely as a resource for ongoing and future projects.
 
@@ -62,7 +62,7 @@ In the first line of the code above we are creating a taxon file, in this case c
 
 In the second line we are telling CheckM to "analyze" using 16 threads (-t 16), and that our genomes have the extension .fa (-x fa) pointing CheckM to a folder that contains all of our _Salmonella_ genomes, and providing CheckM with the path and name of the output folder to create (in this case checkm_output)
 
-In the last line of code we are telling CheckM to assess the data we analyzed in the prior step for contamination and completeness (qa).
+In the last line of code, we are telling CheckM to assess the data we analyzed in the prior step for contamination and completeness (qa).
 
 Completeness and contamination will be written directly to your output file. Usually, contamination at a levels of 5% or less is considered adequate, and genomes should generally be at least 90% complete.
 
@@ -120,7 +120,7 @@ In the script above you are comparing your list against the reference genome NZ_
 
 _**Antibiotic Resistance and Virulence**_
 
-One of the ways we can understand more about our genomes is by identifying genes associated with pathogenicity and resistance to antibiotics. By comparing our sequences to databases that contain the sequences of known antibiotic genes and virulence factors, we can identify these characteristics in our own genomes. There are several different ways to do this, but here we will use one of them most efficient and user friendly tools to do so:
+One of the ways we can understand more about our genomes is by identifying genes associated with pathogenicity and resistance to antibiotics. By comparing our sequences to databases that contain the sequences of known antibiotic genes and virulence factors, we can identify these characteristics in our own genomes. There are several different ways to do this, but here we will use one of them most efficient and user-friendly tools to do so:
 
 **ABRicate** ABRicate is a tool for the mass screening of contigs for antimicrobial resistance or virulence genes, and it comes bundled with multiple databases. You can read more about ABRicate [here](https://github.com/tseemann/abricate).
 
@@ -165,7 +165,7 @@ Once the conda environment is activated, an example of how Prokka might be execu
 for file in *.fa; do tag=${file%.fa}; prokka --prefix "$tag" --genus Salmonella --outdir "$tag"_prokka $file; done
 ```
 
-The code above is a bit complicated because of the prefix and out directory names. To get rid of the extension for these names we are using "tag" which is the filename minus the extension (e.g. tag=${file%.fa}). So for example, if you were running this on a single genome it would look like this:
+The code above is a bit complicated because of the prefix and out directory names. To get rid of the extension for these names we are using "tag" which is the filename minus the extension (e.g. tag=${file%.fa}). So, for example, if you were running this on a single genome it would look like this:
 
 ```
 prokka --prefix genome_1 --genus Salmonella --outdir genome_1_prokka genome_1.fa
@@ -200,7 +200,7 @@ roary -e --mafft -p 16 *.gff
 
 The code above is telling Roary to run and build a core gene alignment using the program mafft (-e --mafft) using 16 threads (-p 16) and utilizing all .gff files in the folder (*.gff). Roary produces a large number of output files for downstream analysis and visualization. Feel free to open these files in excel or a text editor to get a better sense of what they are (but some of them are very large, so you might want to move them to your desktop first). More information on the output files and what you can do with them can be found [here](https://sanger-pathogens.github.io/Roary/). Of particular interest will be the core genome alignment (ending in .aln) which can be used to create a phylogenetic tree, but more on that later.
 
-**Panaroo:** Like Roary, Panaroo is a high speed stand alone pan genome pipeline, which takes annotated assemblies in .gff format (produced by Prokka) and calculates the pan genome. The major difference between the two algorithms is that Panaroo is a graph-based pangenome clustering tool that is able to account for many of the sources of error introduced during the annotation of prokaryotic genome assemblies. More detailed information about Panaroo can be found [here](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02090-4).
+**Panaroo:** Like Roary, Panaroo is a high-speed stand-alone pan genome pipeline, which takes annotated assemblies in .gff format (produced by Prokka) and calculates the pan genome. The major difference between the two algorithms is that Panaroo is a graph-based pangenome clustering tool that is able to account for many of the sources of error introduced during the annotation of prokaryotic genome assemblies. More detailed information about Panaroo can be found [here](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02090-4).
 
 To install Panaroo using conda, copy and paste the code below after creating and activating the Panaroo conda environment:
 
@@ -215,7 +215,7 @@ Once the conda environment is activated, an example of how Panaroo might be exec
 panaroo -t 16 -i *.gff -o panaroo_results --clean-mode strict -a core
 ```
 
-The code above is telling Panaroo to run using 16 threads (-t 16) utilizing all .gff files in the folder (*.gff). It is also telling Panaroo to wrtite the results to the folder panaroo_results (-o), using strict filtering (--clean-mode strict), and to create a core genome alignment (-a). Like Roary, Panaroo produces a large number of output files for downstream analysis and visualization. In fact, the majority of these output files are formatted identically. Therefore, you can use the [link](https://sanger-pathogens.github.io/Roary/) provided above from Roary to understand more about the output files and what you can with them. Again, of particular interest will be the core genome alignment (ending in .aln) which can be used to create a phylogenetic tree (see next step).
+The code above is telling Panaroo to run using 16 threads (-t 16) utilizing all .gff files in the folder (*.gff). It is also telling Panaroo to write the results to the folder panaroo_results (-o), using strict filtering (--clean-mode strict), and to create a core genome alignment (-a). Like Roary, Panaroo produces a large number of output files for downstream analysis and visualization. In fact, the majority of these output files are formatted identically. Therefore, you can use the [link](https://sanger-pathogens.github.io/Roary/) provided above from Roary to understand more about the output files and what you can with them. Again, of particular interest will be the core genome alignment (ending in .aln) which can be used to create a phylogenetic tree (see next step).
 
 _**Tree Building**_
 
@@ -236,7 +236,7 @@ Once the conda environment is activated, you can process your .aln file produced
 snp-sites core_alignment.aln -p -o core_alignement.phy
 ```
 
-This will create a phyllip format (.phy) file with only variable sites which can be used in the next step to build a [maximum likelihood tree](https://en.wikipedia.org/wiki/Computational_phylogenetics#Maximum_likelihood). To build a maximum liklihood tree we are going use 
+This will create a phyllip format (.phy) file with only variable sites which can be used in the next step to build a [maximum likelihood tree](https://en.wikipedia.org/wiki/Computational_phylogenetics#Maximum_likelihood). To build a maximum likelihood tree we are going use 
 RAxML.
 
 **RAxML** RAxML is a program for sequential and parallel Maximum Likelihood based inference of large phylogenetic trees. It can also be used for post-analyses of sets of phylogenetic trees, analyses of alignments and, evolutionary placement of short
@@ -265,18 +265,18 @@ Now that you have a phylogenetic tree, you will likely want to annotate it with 
 
 Hopefully at this point you have a acquired a large amount of data and are interested in visualizing that data. This is how scientists really communicate the results of their work. Below is a mix of general tools (that may be used to transform your data into figures that you conceive), along with some more specific tools (based on the analyses from above). We will start with the general:
 
-**Visualizations With R** At this point in the course you should be familiar with R, and more specifcally R studio. There are a number of resources out there for making visualizations with R, but one of the best is the [R graph gallery](https://www.r-graph-gallery.com/). The R graph gallery not only provides inspiration in the form of beauitful visualizations, it also provides the code. One of the easiest ways to incorporate your own data into these graphs is to run the code for the graph you are interested in, see how they have the data set up, and than manipulate your data so it is set up the same way. Below are some of the visualization techniques you might consider using for your data:
+**Visualizations With R** At this point in the course you should be familiar with R, and more specifically R studio. There are a number of resources out there for making visualizations with R, but one of the best is the [R graph gallery](https://www.r-graph-gallery.com/). The R graph gallery not only provides inspiration in the form of beautiful visualizations, it also provides the code. One of the easiest ways to incorporate your own data into these graphs is to run the code for the graph you are interested in, see how they have the data set up, and then manipulate your data so it is set up the same way. Below are some of the visualization techniques you might consider using for your data:
 
 [_Heatmaps_](https://www.r-graph-gallery.com/heatmap) A heatmap is a graphical representation of data where the individual values contained in a matrix are represented as colors. Heatmaps great for comparing things like ANI (specific code for that below), or differences in the number of antibiotic resistance or virulence factors.
 
-[_Boxplots_](https://www.r-graph-gallery.com/boxplot.html) A boxplot is a standardized way of displaying the distribution of data based on a five number summary (“minimum”, first quartile (Q1), median, third quartile (Q3), and “maximum”). It can tell you about your outliers and what their values are. Boxplots are great for comparing the number of accessory genes in the pan genome, differences in the number of antibiotic resistance or virulence factors based on specific groups in your dataset, or how the number of factors vary across time or any other grouping. A visualy appealing variation of the boxplot is the [violin chart](https://www.r-graph-gallery.com/violin.html).
+[_Boxplots_](https://www.r-graph-gallery.com/boxplot.html) A boxplot is a standardized way of displaying the distribution of data based on a five-number summary (“minimum”, first quartile (Q1), median, third quartile (Q3), and “maximum”). It can tell you about your outliers and what their values are. Boxplots are great for comparing the number of accessory genes in the pan genome, differences in the number of antibiotic resistance or virulence factors based on specific groups in your dataset, or how the number of factors vary across time or any other grouping. A visually appealing variation of the boxplot is the [violin chart](https://www.r-graph-gallery.com/violin.html).
 
 [Chord Diagrams](https://www.r-graph-gallery.com/chord-diagram.html) 
-A Chord diagram allows for the visualization of flows between a set of entities. Chord diagrams can be used to show how genes are distributed across different groupings of your genomes. They can also be used to show how your genomes are interrealted based on any given factor (host, year, etc.). 
+A Chord diagram allows for the visualization of flows between a set of entities. Chord diagrams can be used to show how genes are distributed across different groupings of your genomes. They can also be used to show how your genomes are interrelated based on any given factor (host, year, etc.). 
 
 **Building Trees With The Interactive Tree Of Life (iTOL)**
 
-[iTOL](https://itol.embl.de/) can visualize trees with 50'000 or more leaves. With advanced search capabilities and display of unrooted, circular and regular cladograms or phylograms, exploring and navigating trees of any size is simple. There are a wide range of resources for annotating your phylogentic trees with the data you've produced. Itol includes a number of instructive pages on [tree annotation](https://itol.embl.de/help.cgi#annot) and [how-to videos](https://itol.embl.de/video_tutorial.cgi) for your convenience.
+[iTOL](https://itol.embl.de/) can visualize trees with 50'000 or more leaves. With advanced search capabilities and display of unrooted, circular and regular cladograms or phylograms, exploring and navigating trees of any size is simple. There are a wide range of resources for annotating your phylogenetic trees with the data you've produced. Itol includes a number of instructive pages on [tree annotation](https://itol.embl.de/help.cgi#annot) and [how-to videos](https://itol.embl.de/video_tutorial.cgi) for your convenience.
 
 We have worked with iTOL to set up a shared account for this fellowship. 
 The user info is below: 
@@ -285,7 +285,7 @@ username: bioinfo_2021 / password: ualbany
 
 **Making a FastANI Heatmap**
 
-One of the analysis techniques we looked at above was FastANI. FastANI allows you to calculate the average nulceotdie identity (ANI) between all pairs of genomes you are examining. This can be visualized nicely with the R code here:
+One of the analysis techniques we looked at above was FastANI. FastANI allows you to calculate the average nulceotide identity (ANI) between all pairs of genomes you are examining. This can be visualized nicely with the R code here:
 
 ```
 library("reshape2")
@@ -315,7 +315,7 @@ After doing so, sort your ANI column by the highest value to the lowest, and sav
 
 There are many tools out there to visualize the output of Roary or Panaroo along with a tree. Some of them (straight from the [Roary website](https://sanger-pathogens.github.io/Roary/)) are listed here:
 
-_**roary_plots.py**_ This contributed script by Marco Galardini is very useful. Additional details can be found [here](https://github.com/sanger-pathogens/Roary/tree/master/contrib/roary_plots) in the repository. It provides 3 figures, showing the tree compared to a matrix with the presence and absence of core and accessory genes. The next is an pie chart of the breakdown of genes and the number of isolate they are present in. And finally there is a graph with the frequency of genes versus the number of genomes.
+_**roary_plots.py**_ This contributed script by Marco Galardini is very useful. Additional details can be found [here](https://github.com/sanger-pathogens/Roary/tree/master/contrib/roary_plots) in the repository. It provides 3 figures, showing the tree compared to a matrix with the presence and absence of core and accessory genes. The next is a pie chart of the breakdown of genes and the number of isolate they are present in, and finally there is a graph with the frequency of genes versus the number of genomes.
 
 <img width="477" alt="Screen Shot 2021-06-07 at 11 12 58 AM" src="https://user-images.githubusercontent.com/43999021/121042243-7c985a00-c781-11eb-9876-0da6ae7243cc.png">
 
@@ -324,8 +324,24 @@ By dropping the python script in the same folder as your gene_presence_absence.c
 ```
 roary_plots.py name_of_your_newick_tree_file.tre gene_presence_absence.csv
 ```
-_**Interactive visualisation with Phandango**_ James Hadfield has produced the [Phandango website](http://jameshadfield.github.io/phandango/#/) which allows for interactive visualisation of the output of Roary. You can drag and drop the results into your web browser, then interactively play around with the data. There is an example data set from Roary on the website.
+_**Interactive visualization with Phandango**_ James Hadfield has produced the [Phandango website](http://jameshadfield.github.io/phandango/#/) which allows for interactive visualization of the output of Roary. You can drag and drop the results into your web browser, then interactively play around with the data. There is an example data set from Roary on the website.
 
+_**Interactive visualization with FriPan**_ David Powell has produced the [FriPan website](http://drpowell.github.io/FriPan/) which allows for interactive visualization of the output of Roary. Jason Kwong has created a [converter script](https://github.com/kwongj/roary2fripan) to transform the output of Roary into a suitable format for FriPan.
+
+_**PanVizGenerator**_ Thomas Lin Pedersen has created an R package which allows for some excellent visualisation of the output of Roary called [PanVizGenerator](https://github.com/thomasp85/PanVizGenerator).
+
+_**panX**_ panX can use the output of roary as input to their [excellent visualization tool](https://pangenome.tuebingen.mpg.de/).
+
+_**Roary2SVG**_ Torsten Seemann has contributed a script called [roary2svg.pl](https://github.com/sanger-pathogens/Roary/blob/master/contrib/roary2svg/roary2svg.pl) which will produce a nice figure with the gene presence and absence of each sample, plus a count of genes.
 
 **Combining Trees and Data**
+
+Above we introduced iTOL, an excellent tool for combining data with trees, but if you are loving R and would like to go the extra mile there are a wide array of resources for tree building. Click the links below to see some example along with their scripts:
+
+[Phylogenetic trees in R using ggtree](https://www.molecularecologist.com/2017/02/08/phylogenetic-trees-in-r-using-ggtree/)
+
+[phylo.heatmap: Creates a phylogenetic heat map](https://rdrr.io/cran/phytools/man/phylo.heatmap.html)
+
+[Plotting tree with data](https://yulab-smu.top/treedata-book/chapter7.html)
+
 
