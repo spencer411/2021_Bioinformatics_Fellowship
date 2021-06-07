@@ -16,10 +16,10 @@ Our intention is to make this GitHub site available indefinitely as a resource f
 | [Antibiotic Resistance and Virulence](#antibiotic-resistance-and-virulence)                  |
 | [Annotation](#annotation)                                           |
 | [Pan-Genome Analysis](#pan-genome-analysis)                                  |
-| Tree Building                                        |
+| [Tree Building](#tree-building)                                        |
 | [VISUALIZATION TOOLS](#visualization-tools)                              |
-| Visualizations with R                                |
-| Building Trees With The Interactive Tree Of Life (iTOL)|
+| [Visualizations with R](#visualizations-with-r)                                |
+| [Building Trees With The Interactive Tree Of Life (iTOL)](building-trees-with-the-interactive-tree-of-life-(itol))|
 | Making a FastANI Heatmap                             |
 | Pan-genome Visualizations                            |
 | Combining Tree and Data                              |
@@ -234,7 +234,7 @@ panaroo -t 16 -i *.gff -o panaroo_results --clean-mode strict -a core
 
 The code above is telling Panaroo to run using 16 threads (-t 16) utilizing all .gff files in the folder (*.gff). It is also telling Panaroo to write the results to the folder panaroo_results (-o), using strict filtering (--clean-mode strict), and to create a core genome alignment (-a). Like Roary, Panaroo produces a large number of output files for downstream analysis and visualization. In fact, the majority of these output files are formatted identically. Therefore, you can use the [link](https://sanger-pathogens.github.io/Roary/) provided above from Roary to understand more about the output files and what you can with them. Again, of particular interest will be the core genome alignment (ending in .aln) which can be used to create a phylogenetic tree (see next step).
 
-_**Tree Building**_
+# Tree Building
 
 Building a [phylogenetic tree](https://en.wikipedia.org/wiki/Phylogenetic_tree) is one of the most informative ways to display genomic data when examining groups of isolates. To build a phylogenetic tree you will need a core alignment file produced by either Roary or Panaroo above. These alignment files are huge, as they contain the entire genome sequence for each isolate examined, aligned. Phylogenetic trees are built on genetic differences among genome sequences, therefore all we need to build a phylogenetic tree is the variable sites from the alignment file. We can easily extract those sites using snp-sites. 
 
@@ -282,7 +282,9 @@ Now that you have a phylogenetic tree, you will likely want to annotate it with 
 
 Hopefully at this point you have a acquired a large amount of data and are interested in visualizing that data. This is how scientists really communicate the results of their work. Below is a mix of general tools (that may be used to transform your data into figures that you conceive), along with some more specific tools (based on the analyses from above). We will start with the general:
 
-**Visualizations With R** At this point in the course you should be familiar with R, and more specifically R studio. There are a number of resources out there for making visualizations with R, but one of the best is the [R graph gallery](https://www.r-graph-gallery.com/). The R graph gallery not only provides inspiration in the form of beautiful visualizations, it also provides the code. One of the easiest ways to incorporate your own data into these graphs is to run the code for the graph you are interested in, see how they have the data set up, and then manipulate your data so it is set up the same way. Below are some of the visualization techniques you might consider using for your data:
+# Visualizations With R 
+
+At this point in the course you should be familiar with R, and more specifically R studio. There are a number of resources out there for making visualizations with R, but one of the best is the [R graph gallery](https://www.r-graph-gallery.com/). The R graph gallery not only provides inspiration in the form of beautiful visualizations, it also provides the code. One of the easiest ways to incorporate your own data into these graphs is to run the code for the graph you are interested in, see how they have the data set up, and then manipulate your data so it is set up the same way. Below are some of the visualization techniques you might consider using for your data:
 
 [_Heatmaps_](https://www.r-graph-gallery.com/heatmap) A heatmap is a graphical representation of data where the individual values contained in a matrix are represented as colors. Heatmaps great for comparing things like ANI (specific code for that below), or differences in the number of antibiotic resistance or virulence factors.
 
@@ -291,7 +293,7 @@ Hopefully at this point you have a acquired a large amount of data and are inter
 [Chord Diagrams](https://www.r-graph-gallery.com/chord-diagram.html) 
 A Chord diagram allows for the visualization of flows between a set of entities. Chord diagrams can be used to show how genes are distributed across different groupings of your genomes. They can also be used to show how your genomes are interrelated based on any given factor (host, year, etc.). 
 
-**Building Trees With The Interactive Tree Of Life (iTOL)**
+# Building Trees With The Interactive Tree Of Life (iTOL)
 
 [iTOL](https://itol.embl.de/) can visualize trees with 50'000 or more leaves. With advanced search capabilities and display of unrooted, circular and regular cladograms or phylograms, exploring and navigating trees of any size is simple. There are a wide range of resources for annotating your phylogenetic trees with the data you've produced. Itol includes a number of instructive pages on [tree annotation](https://itol.embl.de/help.cgi#annot) and [how-to videos](https://itol.embl.de/video_tutorial.cgi) for your convenience.
 
