@@ -9,7 +9,7 @@ Our intention is to make this GitHub site available indefinitely as a resource f
 
 | **CONTENTS**                                         |
 | -----------------------------------------------------|
-| **[DATASETS](DATASETS)**                                         |
+| **[DATASETS](**datasets**)**                                         |
 | **DATA ANALYSIS TOOLS**                              |
 | Quality Control                                      | 
 | Average Nucleotide Identity                          |
