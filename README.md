@@ -7,10 +7,10 @@ This GitHub page serves as a resource for students during project 2 of the UAlba
 
 Our intention is to make this GitHub site available indefinitely as a resource for ongoing and future projects.
 
-| Sections                                                | 
-| ------------------------------------------------------- |
-| DATASETS                                                | 
-| DATA ANALYSIS TOOLS                                     | 
+| DATASETS                                             | DATA ANALYSIS TOOLS | 
+| ------------------------------------------------------- | Quality Control |
+|                                                 | 
+|                                      | 
 | Quality Control                                         | 
 
 
