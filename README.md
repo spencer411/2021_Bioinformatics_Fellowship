@@ -277,8 +277,7 @@ Hopefully at this point you have a acquired a large amount of data and are inter
 We have worked with iTOL to set up a shared account for this fellowship. 
 The user info is below: 
 
-username: bioinfo_2021
-password: ualbany
+username: bioinfo_2021 / password: ualbany
 
 **Making a FastANI Heatmap**
 
