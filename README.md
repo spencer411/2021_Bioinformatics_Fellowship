@@ -7,12 +7,22 @@ This GitHub page serves as a resource for students during project 2 of the UAlba
 
 Our intention is to make this GitHub site available indefinitely as a resource for ongoing and future projects.
 
-| DATASETS                                             | DATA ANALYSIS TOOLS | 
-| ------------------------------------------------------- | Quality Control |
-|                                                 | 
-|                                      | 
-| Quality Control                                         | 
-
+| **DATASETS**                                         |
+| -----------------------------------------------------|
+| **DATA ANALYSIS TOOLS**                              |
+| Quality Control                                      | 
+| Average Nucleotide Identity                          |
+| Antibiotic Resistance and Virulence                  |
+| Annotation                                           |
+| Pan-Genome Analysis                                  |
+| Tree Building                                        |
+| -----------------------------------------------------|
+| **VISUALIZATION TOOLS**                              |
+| Visualizations with R                                |
+| Building Trees With The Interactive Tree Of Life (iTOL)|
+| Making a FastANI Heatmap                             |
+| Pan-genome Visualizations                            |
+| Combining Tree and Data                              |
 
 **DATASETS**
 
@@ -318,7 +328,7 @@ Prior to running this code, you should open your FastANI output in excel, remove
 
 After doing so, sort your ANI column by the highest value to the lowest, and save it as a .csv file. After that you should be ready to go!
 
-**Pan-genome Visulations**
+**Pan-genome Visualizations**
 
 There are many tools out there to visualize the output of Roary or Panaroo along with a tree. Some of them (straight from the [Roary website](https://sanger-pathogens.github.io/Roary/)) are listed here:
 
