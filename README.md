@@ -8,7 +8,6 @@ This GitHub page serves as a resource for students during project 2 of the UAlba
 Our intention is to make this GitHub site available indefinitely as a resource for ongoing and future projects.
 
 | **DATASETS**                                         |
-| -----------------------------------------------------|
 | **DATA ANALYSIS TOOLS**                              |
 | Quality Control                                      | 
 | Average Nucleotide Identity                          |
@@ -16,7 +15,6 @@ Our intention is to make this GitHub site available indefinitely as a resource f
 | Annotation                                           |
 | Pan-Genome Analysis                                  |
 | Tree Building                                        |
-| -----------------------------------------------------|
 | **VISUALIZATION TOOLS**                              |
 | Visualizations with R                                |
 | Building Trees With The Interactive Tree Of Life (iTOL)|
