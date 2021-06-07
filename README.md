@@ -332,7 +332,7 @@ After doing so, sort your ANI column by the highest value to the lowest, and sav
 
 # Pan-genome Visualizations
 
-There are many tools out there to visualize the output of Roary or Panaroo along with a tree. Some of them (straight from the [Roary website](https://sanger-pathogens.github.io/Roary/)) are listed here:
+There are many tools out there to visualize the output of Roary and Panaroo along with a tree. Some of them (straight from the [Roary website](https://sanger-pathogens.github.io/Roary/)) are listed here:
 
 _**roary_plots.py**_ This contributed script by Marco Galardini is very useful. Additional details can be found [here](https://github.com/sanger-pathogens/Roary/tree/master/contrib/roary_plots) in the repository. It provides 3 figures, showing the tree compared to a matrix with the presence and absence of core and accessory genes. The next is a pie chart of the breakdown of genes and the number of isolate they are present in, and finally there is a graph with the frequency of genes versus the number of genomes.
 
