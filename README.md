@@ -20,9 +20,9 @@ Our intention is to make this GitHub site available indefinitely as a resource f
 | [VISUALIZATION TOOLS](#visualization-tools)                              |
 | [Visualizations with R](#visualizations-with-r)                                |
 | [Building Trees With iTOL](#building-trees-with-itol)|
-| Making a FastANI Heatmap                             |
-| Pan-genome Visualizations                            |
-| Combining Tree and Data                              |
+| [Making a FastANI Heatmap](#making-a-fastani-heatmap)                             |
+| [Pan-genome Visualizations](#pan-genome-visualizations)                            |
+| [Combining Trees and Data](#combining-trees-and-data)                              |
 
 # DATASETS
 
@@ -302,7 +302,7 @@ The user info is below:
 
 username: bioinfo_2021 / password: ualbany
 
-**Making a FastANI Heatmap**
+# Making a FastANI Heatmap
 
 One of the analysis techniques we looked at above was FastANI. FastANI allows you to calculate the average nulceotide identity (ANI) between all pairs of genomes you are examining. This can be visualized nicely with the R code here:
 
@@ -330,7 +330,7 @@ Prior to running this code, you should open your FastANI output in excel, remove
 
 After doing so, sort your ANI column by the highest value to the lowest, and save it as a .csv file. After that you should be ready to go!
 
-**Pan-genome Visualizations**
+# Pan-genome Visualizations
 
 There are many tools out there to visualize the output of Roary or Panaroo along with a tree. Some of them (straight from the [Roary website](https://sanger-pathogens.github.io/Roary/)) are listed here:
 
@@ -353,7 +353,7 @@ _**panX**_ panX can use the output of roary as input to their [excellent visuali
 
 _**Roary2SVG**_ Torsten Seemann has contributed a script called [roary2svg.pl](https://github.com/sanger-pathogens/Roary/blob/master/contrib/roary2svg/roary2svg.pl) which will produce a nice figure with the gene presence and absence of each sample, plus a count of genes.
 
-**Combining Trees and Data**
+# Combining Trees and Data
 
 Above we introduced iTOL, an excellent tool for combining data with trees, but if you are loving R and would like to go the extra mile there are a wide array of resources for tree building. Click the links below to see some example along with their scripts:
 
