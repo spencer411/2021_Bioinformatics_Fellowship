@@ -269,10 +269,14 @@ Hopefully at this point you have a acquired a large amount of data and are inter
 
 [_Heatmaps_](https://www.r-graph-gallery.com/heatmap) A heatmap is a graphical representation of data where the individual values contained in a matrix are represented as colors. Heatmaps great for comparing things like ANI (specific code for that below), or differences in the number of antibiotic resistance or virulence factors.
 
+[_Boxplots_](https://www.r-graph-gallery.com/boxplot.html) A boxplot is a standardized way of displaying the distribution of data based on a five number summary (“minimum”, first quartile (Q1), median, third quartile (Q3), and “maximum”). It can tell you about your outliers and what their values are. Boxplots are great for comparing the number of accessory genes in the pan genome, differences in the number of antibiotic resistance or virulence factors based on specific groups in your dataset, or how the number of factors vary across time or any other grouping. A visualy appealing variation of the boxplot is the [violin chart](https://www.r-graph-gallery.com/violin.html).
 
+[Chord Diagrams](https://www.r-graph-gallery.com/chord-diagram.html) 
+A Chord diagram allows for the visualization of flows between a set of entities. Chord diagrams can be used to show how genes are distributed across different groupings of your genomes. They can also be used to show how your genomes are interrealted based on any given factor (host, year, etc.). 
 
+**Building Trees With The Interactive Tree Of Life (iTOL)**
 
-**Interactive Tree Of Life (iTOL)**
+iTOL can visualize trees with 50'000 or more leaves. With advanced search capabilities and display of unrooted, circular and regular cladograms or phylograms, exploring and navigating trees of any size is simple. There are a wide range of resources for visualing your data along with your phylogentic trees. Itol includes a number of instructive pages on [tree annotation](https://itol.embl.de/help.cgi#annot) and [how-to videos](https://itol.embl.de/video_tutorial.cgi) for your convenience.
 
 We have worked with iTOL to set up a shared account for this fellowship. 
 The user info is below: 
