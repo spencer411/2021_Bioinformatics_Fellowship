@@ -19,7 +19,7 @@ Our intention is to make this GitHub site available indefinitely as a resource f
 | [Tree Building](#tree-building)                                        |
 | [VISUALIZATION TOOLS](#visualization-tools)                              |
 | [Visualizations with R](#visualizations-with-r)                                |
-| [Building Trees With iTOL](#building-trees-with-itol)|
+| [Visualizing Trees With iTOL](#visualizing-trees-with-itol)|
 | [Making a FastANI Heatmap](#making-a-fastani-heatmap)                             |
 | [Pan-genome Visualizations](#pan-genome-visualizations)                            |
 | [Combining Trees and Data](#combining-trees-and-data)                              |
@@ -293,7 +293,7 @@ At this point in the course you should be familiar with R, and more specifically
 [Chord Diagrams](https://www.r-graph-gallery.com/chord-diagram.html) 
 A Chord diagram allows for the visualization of flows between a set of entities. Chord diagrams can be used to show how genes are distributed across different groupings of your genomes. They can also be used to show how your genomes are interrelated based on any given factor (host, year, etc.). 
 
-# Building Trees With iTOL
+# Visualizing Trees With iTOL
 
 [iTOL](https://itol.embl.de/) can visualize trees with 50,000 or more leaves. With advanced search capabilities and display of unrooted, circular and regular cladograms or phylograms, exploring and navigating trees of any size is simple. There are a wide range of resources for annotating your phylogenetic trees with the data you've produced. Itol includes a number of instructive pages on [tree annotation](https://itol.embl.de/help.cgi#annot) and [how-to videos](https://itol.embl.de/video_tutorial.cgi) for your convenience.
 
