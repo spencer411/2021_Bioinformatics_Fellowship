@@ -11,13 +11,13 @@ Our intention is to make this GitHub site available indefinitely as a resource f
 | -----------------------------------------------------|
 | [DATASETS](#datasets)                            |
 | [DATA ANALYSIS TOOLS](#data-analysis-tools)                             |
-| Quality Control                                      | 
+| Quality Control (#quality-control)                                      | 
 | Average Nucleotide Identity                          |
 | Antibiotic Resistance and Virulence                  |
 | Annotation                                           |
 | Pan-Genome Analysis                                  |
 | Tree Building                                        |
-| **VISUALIZATION TOOLS**                              |
+| [VISUALIZATION TOOLS](#visualization-tools)                              |
 | Visualizations with R                                |
 | Building Trees With The Interactive Tree Of Life (iTOL)|
 | Making a FastANI Heatmap                             |
@@ -55,7 +55,7 @@ This dataset is comprised of 20 biosafety level 2 (BSL-2) opportunistic pathogen
 
 # DATA ANALYSIS TOOLS
 
-_**Quality Control**_
+# Quality Control
 
 One of the first steps in analyzing genomic data is to make sure your data is of good quality. Poor quality data can lead to erroneous results and problems with downstream analysis. Here we present two tools that can be used to assess the quality of the genomes you will be analyzing:
 
@@ -278,7 +278,7 @@ Once you have FigTree installed you can open it and import your tree by clicking
 
 Now that you have a phylogenetic tree, you will likely want to annotate it with data. See more about that in the visualization section below.
 
-**VISUALIZATION TOOLS**
+# VISUALIZATION TOOLS
 
 Hopefully at this point you have a acquired a large amount of data and are interested in visualizing that data. This is how scientists really communicate the results of their work. Below is a mix of general tools (that may be used to transform your data into figures that you conceive), along with some more specific tools (based on the analyses from above). We will start with the general:
 
