@@ -11,9 +11,9 @@ Our intention is to make this GitHub site available indefinitely as a resource f
 | -----------------------------------------------------|
 | [DATASETS](#datasets)                            |
 | [DATA ANALYSIS TOOLS](#data-analysis-tools)                             |
-| Quality Control (#quality-control)                                      | 
-| Average Nucleotide Identity                          |
-| Antibiotic Resistance and Virulence                  |
+| [Quality Control](#quality-control)                                      | 
+| [Average Nucleotide Identity](#average-nucleotide-identity)                          |
+| [Antibiotic Resistance and Virulence] (#antibiotic-resistance-and-virulence)                  |
 | Annotation                                           |
 | Pan-Genome Analysis                                  |
 | Tree Building                                        |
@@ -103,7 +103,7 @@ Note that Quast produces a folder named "quast_results". In the results folder y
 
 Ideally your genomes will have less than 200 contigs and an N50 score greater than 40,000 bp.
 
-_**Average Nucleotide Identity**_
+# Average Nucleotide Identity
 
 The average nucleotide identity (ANI) is a similarity index between a given pair of genomes. A cutoff score of >95% indicates that they belong to the same species. The program below is a fast option for calculating ANI between pairs of genomes, or between genomes and a reference. Note that this analysis does not support highly divergent genomes (< 80% ANI) and therefore should not be used to compare genomes of divergent species. Nevertheless, it may be useful for students examining divergent genomes to confirm species designation by comparing genomes to a reference. 
 
@@ -135,7 +135,7 @@ fastANI --ql list1.txt -r NZ_AP014944.fa -o fastani_refANI_schleif.txt
 
 In the script above you are comparing your list against the reference genome NZ_AP014944.fa (downloaded from NCBI). The output is written to fastani_refANI_schleif.txt file.
 
-_**Antibiotic Resistance and Virulence**_
+# Antibiotic Resistance and Virulence
 
 One of the ways we can understand more about our genomes is by identifying genes associated with pathogenicity and resistance to antibiotics. By comparing our sequences to databases that contain the sequences of known antibiotic genes and virulence factors, we can identify these characteristics in our own genomes. There are several different ways to do this, but here we will use one of them most efficient and user-friendly tools to do so:
 
