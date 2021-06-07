@@ -355,7 +355,7 @@ _**Roary2SVG**_ Torsten Seemann has contributed a script called [roary2svg.pl](h
 
 # Combining Trees and Data
 
-Above we introduced iTOL, an excellent tool for combining data with trees, but if you are loving R and would like to go the extra mile there are a wide array of resources for tree building. Click the links below to see some example along with their scripts:
+Above we introduced iTOL, an excellent tool for combining data with trees, but if you are loving R and would like to go the extra mile there are a wide array of resources for tree building. Click the links below to see some examples along with their scripts:
 
 [Phylogenetic trees in R using ggtree](https://www.molecularecologist.com/2017/02/08/phylogenetic-trees-in-r-using-ggtree/)
 
