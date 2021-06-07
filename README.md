@@ -14,8 +14,8 @@ Our intention is to make this GitHub site available indefinitely as a resource f
 | [Quality Control](#quality-control)                                      | 
 | [Average Nucleotide Identity](#average-nucleotide-identity)                          |
 | [Antibiotic Resistance and Virulence] (#antibiotic-resistance-and-virulence)                  |
-| Annotation                                           |
-| Pan-Genome Analysis                                  |
+| [Annotation](#annotation)                                           |
+| [Pan-Genome Analysis] (#pan-genome-analysis)                                  |
 | Tree Building                                        |
 | [VISUALIZATION TOOLS](#visualization-tools)                              |
 | Visualizations with R                                |
@@ -163,7 +163,7 @@ abricate --summary abricate_vfdb_results.tab > abricate_vfdb_summary.tab
 
 The data created by ABRicate can be extremely informative when combined with a phylogenetic tree (see more on that below). There are also instructions on how that can be done below in the Visualization Tools section.
 
-_**Annotation**_
+# Annotation
 
 Now that we have successfully checked for bad genomes in our dataset, and hopefully removed them, we can move on to some more interesting analyses. One of the first things we will want to do with our genomes is annotate them. Annotation is the the process of identifying features of interest in our genomes, which in our case is genes. Although there are several tools for this sort of analysis, we will use the most popular:
 
@@ -196,7 +196,7 @@ Prokka creates a folder that has several files in it based on the results of the
 mv **/*.gff annotations
 ```
 
-_**Pan-Genome Analysis**_
+# Pan-Genome Analysis
 
 Now we come to one of the more interesting analyses we can carry out on our combined data set. That is a [Pan-genome](https://en.wikipedia.org/wiki/Pan-genome) analysis. A pan-genome can be defined as the entire gene content belonging to a study group. The pan-genome consists of core genes (genes shared by all isolates), shell genes (genes present in the majority of isolates, but not shared by the entire group), and cloud genes (genes present in only a few, or even one isolate). Here you can choose between two of the most commonly used programs for such an analysis:
 
