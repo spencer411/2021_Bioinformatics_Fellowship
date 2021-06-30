@@ -118,10 +118,10 @@ conda install -c bioconda fastani
 Once the conda environment is activated, an example of how FastANI might be executed in a folder full of genomes can be found below:
 
 ```
-fastANI --ql list1.txt --rl list2.txt -o fastani_senterica.txt
+fastANI --ql list1.txt --rl list2.txt -o fastani_output.txt
 ```
 
-In the above script we are comparing genomes from list1.txt to list2.txt and the output is written to fastani_senterica.txt. To create a list of genomes for FastANI, one can simply use the following code to create a list for a given folder:
+In the above script we are comparing genomes from list1.txt to list2.txt and the output is written to fastani_output.txt. To create a list of genomes for FastANI, one can simply use the following code to create a list for a given folder, where the * symbol acts as a wild card, telling the command line to list everything that ends in .fa:
 
 ```
 ls *.fa > list1.txt
