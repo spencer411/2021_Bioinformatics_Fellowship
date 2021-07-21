@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --job-name=panaroo      # Job name
+#SBATCH --ntasks=1                   # Run a single task
+#SBATCH --mem=50gb                     # Job memory request
+#SBATCH --cpus-per-task=5            # Number of CPU cores per task
+#SBATCH --time=24:00:00              # Time limit hrs:min:sec
+#SBATCH --output=panaroo.log     # Standard output and error log
+
+source /network/rit/lab/andamlab/bin/miniconda3/etc/profile.d/conda.sh
+conda activate panaroo
+umask g+rwx
+panaroo -t 16 -i *.gff -o panaroo_results --clean-mode strict -a core
+exit 0

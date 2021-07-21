@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --job-name=prokka      # Job name
+#SBATCH --ntasks=1                   # Run a single task
+#SBATCH --mem=50gb                     # Job memory request
+#SBATCH --cpus-per-task=5            # Number of CPU cores per task
+#SBATCH --time=24:00:00              # Time limit hrs:min:sec
+#SBATCH --output=prokka.log     # Standard output and error log
+
+source /network/rit/lab/andamlab/bin/miniconda3/etc/profile.d/conda.sh
+conda activate prokka
+umask g+rwx
+for file in *.fa; do tag=${file%.fa}; prokka --prefix "$tag" --genus Salmonella --outdir "$tag"_prokka $file; done
+exit 0
