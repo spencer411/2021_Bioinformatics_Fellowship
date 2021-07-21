@@ -250,7 +250,7 @@ conda install -c bioconda snp-sites
 Once the conda environment is activated, you can process your .aln file produced by Roary or Panaroo using the code below:
 
 ```
-snp-sites core_alignment.aln -p -o core_alignement.phy
+snp-sites core_gene_alignment.aln -p -o core_alignement.phy
 ```
 
 This will create a phyllip format (.phy) file with only variable sites which can be used in the next step to build a [maximum likelihood tree](https://en.wikipedia.org/wiki/Computational_phylogenetics#Maximum_likelihood). To build a maximum likelihood tree we are going use 
