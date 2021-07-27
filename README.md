@@ -370,6 +370,6 @@ Below are links to youtube videos that explain how to carry out the analysis and
 
 Running analysis 1: https://youtu.be/pe3A1T1X0JY
 
-Interpreting analysis 1: https://youtu.be/o9jKxDRdLE0
+Interpreting analysis 1 (checkm and quast): https://youtu.be/o9jKxDRdLE0
 
 Running analysis 2:
