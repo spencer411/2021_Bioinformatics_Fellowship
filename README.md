@@ -23,6 +23,7 @@ Our intention is to make this GitHub site available indefinitely as a resource f
 | [Making a FastANI Heatmap](#making-a-fastani-heatmap)                             |
 | [Pan-genome Visualizations](#pan-genome-visualizations)                            |
 | [Combining Trees and Data](#combining-trees-and-data)                              |
+| [HOW TO VIDEOS](#how-to-videos)                              |
 
 # DATASETS
 
@@ -363,4 +364,12 @@ Above we introduced iTOL, an excellent tool for combining trees with data, but i
 
 [Plotting tree with data](https://yulab-smu.top/treedata-book/chapter7.html)
 
+# HOW TO VIDEOS
 
+Below are links to youtube videos that explain how to carry out the analysis and visualizations above
+
+Running analysis 1: https://youtu.be/pe3A1T1X0JY
+
+Interpreting analysis 1: https://youtu.be/o9jKxDRdLE0
+
+Running analysis 2:
