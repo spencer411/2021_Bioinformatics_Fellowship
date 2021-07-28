@@ -373,3 +373,5 @@ Running analysis 1: https://youtu.be/pe3A1T1X0JY
 Interpreting analysis 1 (checkm and quast): https://youtu.be/o9jKxDRdLE0
 
 Running analysis 2 (modifying your tree and getting it in itol): https://youtu.be/AEi-hsBtgFk
+
+ABRicate and annotating your trees in iTOL: https://youtu.be/f984TALFM4k
