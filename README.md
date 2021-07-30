@@ -378,3 +378,6 @@ ABRicate and annotating your trees in iTOL: https://youtu.be/f984TALFM4k
 
 fastANI heat map visualization with R: https://youtu.be/LVZLESTcGxU
 
+Editing figures with INKscape: https://youtu.be/ucSz8fifL1U
+
+
