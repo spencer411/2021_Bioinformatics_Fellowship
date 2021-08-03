@@ -380,4 +380,9 @@ fastANI heat map visualization with R: https://youtu.be/LVZLESTcGxU
 
 Editing figures with INKscape: https://youtu.be/ucSz8fifL1U
 
+How to make a color strip in iTOL: https://youtu.be/JFb3urfgofs
+
+How to make an AMR heatmap with diverse species: https://youtu.be/BLXKCsE1sOM
+
+
 
